@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apps by Marian — Indie iOS Apps &amp; Micro-SaaS</title>
+<meta name="description" content="Apps by Marian is an independent software studio run by Marian Vrtik, building iOS apps and micro-SaaS products from Horsens, Denmark.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">AM</span>
+      <span class="brand-name">Apps by Marian</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="top" class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Indie developer · Horsens, Denmark</p>
+      <h1>Small studio.<br>Focused apps.</h1>
+      <p class="lede">
+        Apps by Marian is a one-person studio building iOS apps and
+        micro-SaaS products — designed simply, shipped independently,
+        and made to actually get used.
+      </p>
+      <div class="cta-row">
+        <a href="#work" class="btn btn-primary">See the apps</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="work">
+    <div class="wrap">
+      <h2>What I'm building</h2>
+      <p class="section-sub">A couple of things currently in the oven.</p>
+
+      <div class="card-grid">
+
+        <article class="card">
+          <div class="card-icon" style="--tint:#5b8def;">🎛️</div>
+          <h3>PadFlip</h3>
+          <p>An iOS soundboard app for launching samples, one-shots and loops on the go.</p>
+          <span class="status">In development</span>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" style="--tint:#ff7a5c;">🎚️</div>
+          <h3>SoundSketch</h3>
+          <p>A lightweight sound-design tool for sketching ideas quickly, without a full DAW.</p>
+          <span class="status">In development</span>
+        </article>
+
+        <article class="card card-placeholder">
+          <div class="card-icon" style="--tint:#8f8f9a;">＋</div>
+          <h3>Something new</h3>
+          <p>Always tinkering on the next small, useful thing.</p>
+          <span class="status">Coming soon</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-inner">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>
+          I'm Marian Vrtik, an indie developer based in Horsens, Denmark.
+          Apps by Marian is my independent studio for building focused
+          iOS apps and micro-SaaS products — small, sustainable software
+          made without a team, a roadmap deck, or venture funding.
+        </p>
+        <p>
+          I care about apps that do one thing well, load fast, and
+          respect the person using them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap contact-inner">
+      <h2>Let's talk</h2>
+      <p class="section-sub">Questions, feedback, or just want to say hi — reach out.</p>
+      <a class="email-link" href="mailto:marian@appsbymarian.dk">marian@appsbymarian.dk</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> Apps by Marian · Marian Vrtik</p>
+    <p>Horsens, Denmark · CVR 46671872</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
