@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PadFlip Guide — every feature, in the order you make a beat</title>
+<meta name="description" content="The PadFlip guide: loading and chopping sounds, shaping pads, building patterns, mixing, resampling and exporting, with the reasoning behind each design choice.">
+<meta name="theme-color" content="#07060B">
+<link rel="icon" href="assets/icon-512.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="./"><img src="assets/icon-512.png" alt="">PADFLIP</a>
+    <nav class="topnav" aria-label="PadFlip">
+      <a href="./#how">How it works</a>
+      <a href="./#features">Features</a>
+      <a href="guide.html" class="keep" aria-current="page">Guide</a>
+      <a href="./#beta" class="keep">Beta</a>
+      <a href="../" class="studio">Apps by Marian</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<header class="hero scanbg">
+  <div class="wrap">
+    <div>
+      <p class="kicker">PADFLIP · GUIDE</p>
+      <h1 class="headline">From one sound<br><span class="accent">to a finished beat.</span></h1>
+      <p class="sub">This guide follows the order you make a beat in: load a sound, chop it, shape the pads, build a pattern, mix, resample, export. Every feature is covered on the way, along with why it works the way it does.</p>
+      <div class="stats">
+        <div class="stat"><span class="n">64</span><span class="l">Pads, 4 banks</span></div>
+        <div class="stat"><span class="n">16</span><span class="l">Steps per bar</span></div>
+        <div class="stat"><span class="n">2,235</span><span class="l">Sounds included</span></div>
+        <div class="stat"><span class="n">50</span><span class="l">Undo steps</span></div>
+      </div>
+    </div>
+    <nav class="toc" aria-label="Contents">
+      <p class="toc-head">CONTENTS</p>
+      <ol>
+        <li><a href="#start"><span class="n">01</span>Find your way around</a></li>
+        <li><a href="#loading"><span class="n">02</span>Load a sound</a></li>
+        <li><a href="#library"><span class="n">03</span>Browse the library</a></li>
+        <li><a href="#chop"><span class="n">04</span>Chop it</a></li>
+        <li><a href="#keytempo"><span class="n">05</span>Lock key &amp; tempo</a></li>
+        <li><a href="#pads"><span class="n">06</span>Shape each pad</a></li>
+        <li><a href="#pattern"><span class="n">07</span>Build a pattern</a></li>
+        <li><a href="#effects"><span class="n">08</span>Mix it</a></li>
+        <li><a href="#resample"><span class="n">09</span>Resample &amp; go again</a></li>
+        <li><a href="#export"><span class="n">10</span>Get it out</a></li>
+        <li><a href="#projects"><span class="n">11</span>Keep several projects</a></li>
+        <li><a href="#safety"><span class="n">12</span>Undo &amp; safety</a></li>
+        <li><a href="#settings"><span class="n">13</span>Settings</a></li>
+        <li><a href="#ipad"><span class="n">14</span>On iPad</a></li>
+        <li><a href="#trouble"><span class="n">15</span>Troubleshooting</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<section id="start">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">01</span>FIND YOUR WAY AROUND</p>
+    <h2 class="h2">Two pages, one panel, and a beat already loaded</h2>
+    <div class="prose">
+      <p>PadFlip opens with a starter kit across all four banks, so there's something to tap straight away. Everything lives on two pages and one panel:</p>
+      <ul>
+        <li><strong>PADS</strong> holds the source sound, its waveform with the cuts, and the 16 pads of the current bank. Tapping a pad plays it and selects it.</li>
+        <li><strong>STEPS</strong> holds the selected pad's 16 steps as a 4×4 page, with PLAY. <strong>ALL PADS</strong> opens every pad's row in one 16×16 grid with the full transport.</li>
+        <li><strong>MIX</strong> holds the master effects. It slides up over the page on a phone, so the pads stay reachable.</li>
+      </ul>
+      <p>The header holds the tempo (<span class="kbd">− / +</span>), the detected <strong>KEY</strong>, the <strong>REC</strong> light, and <strong>UNDO / REDO</strong>. There are <strong>4 banks</strong> (A–D), so <strong>64 pads</strong> in all.</p>
+    </div>
+
+    <h3 class="h3">The first flip</h3>
+    <p class="lead" style="margin-bottom:24px">On first launch, <strong class="hl">FIRST FLIP IN 60 SECONDS</strong> walks you through a whole beat in six steps. Each card highlights the control it means and sits on the other half of the screen, so it never covers it. A step completes when you do it, not on a timer.</p>
+    <ol class="steps">
+      <li><p><strong>LOAD A SAMPLE.</strong> Import a file, or tap RECORD and record into the bank.</p></li>
+      <li><p><strong>PLAY A SLICE.</strong> Tap a pad. Each one is a slice of that sample.</p></li>
+      <li><p><strong>MAKE A PATTERN.</strong> Open STEPS and tap a cell.</p></li>
+      <li><p><strong>SEE EVERY PAD.</strong> ALL PADS shows the whole bank at once, one row per pad.</p></li>
+      <li><p><strong>SHAPE THE SOUND.</strong> MIX opens the effects for the whole beat.</p></li>
+      <li><p><strong>EXPORT THE LOOP.</strong> Save it when the pattern is worth keeping.</p></li>
+    </ol>
+    <div class="note">
+      <p class="nl">Tips</p>
+      <p>After the walkthrough, a one-line <b>TIP</b> explains each of fifteen controls the first time you touch it: pad settings, chop modes, zoom, lock markers, USE BPM, scale lock, gate, swing, velocity, MET, RND, CLR, MIX, RECORD LIVE and EXPORT LOOP. <b>GOT IT</b> dismisses it for good. <b>SKIP</b> closes the walkthrough; Settings → <b>SHOW FIRST FLIP</b> brings it back, and Settings → <b>TIPS</b> switches tips off or shows them all again.</p>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>Many beat apps open on an empty project and a manual. PadFlip opens on a playable kit and teaches by doing, so <b>the first beat comes before the first menu</b>. Tips appear only at the moment a control is touched, once, instead of as a tour you sit through.</p>
+    </div>
+  </div>
+</section>
+
+<section id="loading" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">02</span>LOAD A SOUND</p>
+    <h2 class="h2">Five ways onto a pad</h2>
+    <p class="lead">Mix them freely within one bank. The first fills the whole bank; the others touch one pad.</p>
+    <div class="fgrid">
+      <div class="fcard"><p class="tag">Whole bank</p><p class="ft">Chop a sample</p><p class="fd"><b>RECORD</b> or <b>IMPORT</b>, under the pads. One sound is sliced across all 16 pads of the current bank. Tap <b>STOP</b> to end a recording.</p></div>
+      <div class="fcard"><p class="tag">Empty pad</p><p class="ft">Record onto one pad</p><p class="fd"><span class="kbd">Long-press</span> an empty pad to record a one-shot straight onto it.</p></div>
+      <div class="fcard"><p class="tag">Empty pad</p><p class="ft">Pick from the library</p><p class="fd"><span class="kbd">Tap</span> an empty pad to browse the Sound Library and assign a sound to it.</p></div>
+      <div class="fcard"><p class="tag">Loaded pad</p><p class="ft">Replace what's there</p><p class="fd"><span class="kbd">Long-press</span> a loaded pad and choose <b>RECORD OVER THIS PAD</b> or <b>CHOOSE FROM LIBRARY</b>.</p></div>
+      <div class="fcard"><p class="tag">Loaded pad</p><p class="ft">Resample your mix</p><p class="fd"><b>RESAMPLE MIX TO THIS PAD</b> records one bar of the live pattern, effects included, onto the pad. See <a href="#resample">Resample</a>.</p></div>
+      <div class="fcard"><p class="tag">Good to know</p><p class="ft">Your files are copied in</p><p class="fd">Recorded and imported audio is copied into the app, so deleting the original from Files later can't break your project.</p></div>
+    </div>
+    <div class="prose">
+      <ul>
+        <li>RECORD and IMPORT replace the bank's auto-chopped pads. Pads you recorded onto or filled from the library are kept.</li>
+        <li>With the metronome on (<span class="kbd">ALL PADS → MET</span>), recording onto a pad counts in one bar first and starts on the downbeat. The bank RECORD button starts immediately.</li>
+        <li>Imports are capped at <strong>60 seconds</strong>. A longer file is chopped from its first minute, and PadFlip says so.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="library">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">03</span>BROWSE THE LIBRARY</p>
+    <h2 class="h2">2,235 sounds, all included</h2>
+    <div class="prose">
+      <p>The library holds <strong>24 sounds built into the app</strong>, always available offline, plus <strong>72 packs</strong> you download on demand from Apple's servers. Open it by tapping an empty pad, by choosing <strong>CHOOSE FROM LIBRARY</strong> on a loaded one, or from <span class="kbd">Settings → SOUND PACKS → MANAGE</span>.</p>
+    </div>
+    <div class="specsheet">
+      <div class="row"><span class="k">Percussion</span><span class="v">1,227 sounds</span></div>
+      <div class="row"><span class="k">FX</span><span class="v">556 sounds</span></div>
+      <div class="row"><span class="k">Melodic</span><span class="v">370 sounds</span></div>
+      <div class="row"><span class="k">Bass</span><span class="v">58 sounds</span></div>
+      <div class="row"><span class="k">Kicks</span><span class="v">24 sounds</span></div>
+    </div>
+    <div class="prose">
+      <ul>
+        <li><strong>One pack at a time.</strong> Downloading Cowbell Kit doesn't pull in the other percussion packs.</li>
+        <li><strong>Search</strong> across every pack, downloaded or not, and <strong>preview</strong> any sound with ▶ before <strong>USE</strong> assigns it.</li>
+        <li><strong>CANCEL</strong> stops a download; a stalled one gives up after a while and offers <strong>RETRY</strong>.</li>
+        <li><strong>REMOVE DOWNLOAD</strong> frees the space. Browsing back to the pack downloads it again.</li>
+      </ul>
+      <p>The built-in melodic set is tuned: the mallets form one interval spread and the bells a C major chord, so they sit in tune with each other.</p>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>Selling sound packs one by one is common in this category. Here <b>every pack is in the price, including packs added later</b>, with no in-app purchases. Packs download individually so a phone with little space only stores what you use.</p>
+    </div>
+  </div>
+</section>
+
+<section id="chop" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">04</span>CHOP IT</p>
+    <h2 class="h2">How a sample becomes sixteen pads</h2>
+    <p class="lead">Choose under <span class="kbd">CHOP</span>, just below the waveform. Switching re-chops immediately, and you can undo it.</p>
+    <div class="fgrid">
+      <div class="fcard"><p class="ft">EQUAL</p><p class="fd">Sixteen slices of identical length. Predictable, and works on anything.</p></div>
+      <div class="fcard"><p class="ft">HITS</p><p class="fd">Slices start on detected transients, spread across the whole sample, so every pad begins on a real hit. Best for drums. Falls back to an even chop if it can't find enough hits.</p></div>
+      <div class="fcard"><p class="ft">BEATS</p><p class="fd">Slices land on sixteenth notes at the detected tempo. Best for loops already in time. Falls back to an even chop when no tempo was found.</p></div>
+    </div>
+
+    <h3 class="h3">Move the cuts by hand</h3>
+    <div class="specsheet">
+      <div class="row"><span class="k">Drag a handle</span><span class="v">Moves that cut. A cut can't cross its neighbours. <span class="dim">Handle 01 is pinned to the start.</span></span></div>
+      <div class="row"><span class="k">Tap the waveform</span><span class="v">Moves the nearest cut to where you tapped.</span></div>
+      <div class="row"><span class="k">ZOOM</span><span class="v">1×, 2×, 4× or 8×. <span class="dim">Drag the waveform to scroll along it; handles still drag and taps still move a cut.</span></span></div>
+      <div class="row"><span class="k">LOCK MARKERS</span><span class="v">Taps only select, so a stray touch can't move anything. <span class="dim">Handles still drag.</span></span></div>
+      <div class="row"><span class="k">SNAP ZERO-X</span><span class="v">On a wide iPad, nudges the selected cut to the nearest zero crossing so it starts without a click.</span></div>
+    </div>
+    <div class="prose">
+      <ul>
+        <li>Changing the chop mode discards hand-placed cuts.</li>
+        <li>Pads you recorded onto or filled from the library <strong>are kept</strong> when you re-chop.</li>
+        <li>The waveform draws what each pad really plays. A pad's trimmed start and end are faded inside its slice, and a pad holding its own sound has its whole slice faded.</li>
+        <li>A bank filled pad by pad has no source to chop, so the waveform and CHOP row are hidden, and the status line counts the loaded pads.</li>
+      </ul>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>On most samplers, chopping means placing sixteen markers by ear before anything is playable. HITS and BEATS do that first pass for you from the audio itself, so <b>the kit plays the moment it loads</b>, and the handles are there for the cuts you want to fix.</p>
+    </div>
+  </div>
+</section>
+
+<section id="keytempo">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">05</span>LOCK KEY &amp; TEMPO</p>
+    <h2 class="h2">It listens so you don't have to</h2>
+    <div class="prose">
+      <p>After a whole-bank load, PadFlip analyses the sample in the background. The key shows in the header, and the row above the pads offers two controls:</p>
+    </div>
+    <div class="fgrid two">
+      <div class="fcard"><p class="ft">USE 120 BPM</p><p class="fd">Shows the tempo it found. Tap it to set the pattern to that tempo, so the beat and the sample line up. It can be undone, and tapped again any time to re-sync.</p></div>
+      <div class="fcard"><p class="ft">SCALE LOCK</p><p class="fd">While it's on, pitching a pad snaps to the nearest note in the detected key. The pad sheet shows <b>LOCKED TO</b> and the key. Turn it off for full chromatic control.</p></div>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>Pitching chops is how a melody comes out of a sample, and it's where beginners drift out of key. Scale Lock keeps every pitched pad inside the sample's own key, so <b>you can play melodies without knowing music theory</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pads" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">06</span>SHAPE EACH PAD</p>
+    <h2 class="h2">Every pad is its own instrument</h2>
+    <p class="lead"><span class="kbd">Tap</span> to play. Pads never cut each other off: two at once layer, and re-hitting one restarts it. Each loaded pad shows a small waveform and its length. <span class="kbd">Long-press</span> a loaded pad to open its settings.</p>
+    <div class="specsheet">
+      <div class="row"><span class="k">NAME THIS PAD</span><span class="v">A short label shown on the pad. <span class="dim">Assigning a library sound fills it in.</span></span></div>
+      <div class="row"><span class="k">PITCH</span><span class="v">−12 to +12 semitones. <span class="dim">Snaps to the key while Scale Lock is on.</span></span></div>
+      <div class="row"><span class="k">VOLUME</span><span class="v">0–100%.</span></div>
+      <div class="row"><span class="k">PAN</span><span class="v">L100 to R100. <span class="dim">Centre reads C.</span></span></div>
+      <div class="row"><span class="k">STRETCH</span><span class="v">0.50× to 2.00×. <span class="dim">Changes speed without changing pitch.</span></span></div>
+      <div class="row"><span class="k">TRIM</span><span class="v">Cuts this pad's start or end. <span class="dim">See below.</span></span></div>
+      <div class="row"><span class="k">REVERSE</span><span class="v">Plays the pad backwards.</span></div>
+      <div class="row"><span class="k">Replace the sound</span><span class="v"><b>RESAMPLE MIX TO THIS PAD</b>, <b>RECORD OVER THIS PAD</b> or <b>CHOOSE FROM LIBRARY</b>.</span></div>
+    </div>
+
+    <h3 class="h3">TRIM: shorten one pad, leave the rest</h3>
+    <div class="prose">
+      <p>TRIM shows the pad's own sound in detail, so even a 0.2-second hit fills the strip. Drag sideways to move <strong>S</strong> (start) or <strong>E</strong> (end). A drag takes whichever handle is nearer, so you don't have to hit the thin line. The faded parts don't play, and each cut gets a few milliseconds of fade so it never clicks.</p>
+      <ul>
+        <li>The readout shows the kept range, such as <span class="kbd">0:00.081 – 0:00.303</span>, and <span class="kbd">PLAYS 0:00.222</span>.</li>
+        <li><strong>PLAY</strong> auditions the pad; <strong>RESET</strong> restores the full length.</li>
+        <li>In the sequencer, GATE counts from the trimmed start.</li>
+        <li>Giving the pad a new sound resets its trim. The trim is saved and undoable.</li>
+      </ul>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>Moving a cut on the waveform always changes two pads: one gets longer as the next gets shorter. TRIM is the other half: <b>it cuts one pad without touching its neighbours</b>, so you can tighten a snare's tail without shifting the hat after it.</p>
+    </div>
+    <div class="prose" style="margin-top:20px"><p>Pads give a light haptic tap when played, following your iPhone's system haptics setting. With VoiceOver on, each pad reads out its number, its name, and whether it holds a sound.</p></div>
+  </div>
+</section>
+
+<section id="pattern">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">07</span>BUILD A PATTERN</p>
+    <h2 class="h2">Sixteen steps, one bar, two views</h2>
+    <p class="lead">Tap a pad to select it, then open <strong class="hl">STEPS</strong>. Step 1 is top-left, reading across, so the four rows are the four beats. Tap a cell to turn it on; the bar inside a lit cell is that step's velocity. The playhead lights the step that's sounding.</p>
+    <div class="fgrid two">
+      <div class="fcard"><p class="tag">One pad</p><p class="ft">STEPS FOR THIS PAD</p><p class="fd">The selected pad's 16 steps as a 4×4 page, big enough for thumbs. Pick another pad on PADS to program it.</p></div>
+      <div class="fcard"><p class="tag">Every pad</p><p class="ft">ALL PADS</p><p class="fd">Every pad's row in one 16×16 grid with the full transport. <b>THIS PAD</b> returns to the 4×4 page.</p></div>
+    </div>
+
+    <h3 class="h3">Transport</h3>
+    <div class="specsheet">
+      <div class="row"><span class="k">PLAY / STOP</span><span class="v">Step 1 sounds the moment you press PLAY.</span></div>
+      <div class="row"><span class="k">BPM</span><span class="v">60 to 180. <span class="dim">Changing tempo mid-loop keeps the beat's phase, so it speeds up or slows down without stumbling.</span></span></div>
+      <div class="row"><span class="k">MET</span><span class="v">Metronome, clicking every beat with an accent on the bar, and the count-in for recording. <span class="dim">Never included in an export or recording.</span></span></div>
+      <div class="row"><span class="k">RND</span><span class="v">Randomises the pattern, weighted toward downbeats, using loaded pads only. <span class="dim">UNDO takes it back.</span></span></div>
+      <div class="row"><span class="k">CLR</span><span class="v">Clears every step. <span class="dim">UNDO brings it back.</span></span></div>
+    </div>
+
+    <h3 class="h3">Groove</h3>
+    <div class="fgrid">
+      <div class="fcard"><p class="ft">SWING</p><p class="fd">0–100%. Pushes every second sixteenth later, up to half a step, for a looser, shuffled feel. The playhead stays on the grid; only the sound moves.</p></div>
+      <div class="fcard"><p class="ft">GATE</p><p class="fd">How long a step may sound, from 5% of a step to the whole pad. Lower is tighter and choppier. Short gates fade out so they don't click. Long sounds need it near 100%.</p></div>
+      <div class="fcard"><p class="ft">VEL</p><p class="fd">Level for the selected pad's steps. Moving it sets every lit step of that pad and the level new steps get.</p></div>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>The sequencer is scheduled against the <b>audio clock</b>, not the screen, so the beat holds while you scroll, open panels, switch apps or lock the phone. All 64 pads stay live whichever bank is on screen, so one pattern drives every bank at once.</p>
+    </div>
+  </div>
+</section>
+
+<section id="effects" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">08</span>MIX IT</p>
+    <h2 class="h2">One chain for the whole beat</h2>
+    <p class="lead">Tap <strong class="hl">MIX</strong> at the top. Effects apply after all 64 pads are mixed, in this order: distortion, filter, delay, reverb, then a limiter so sixteen pads at once can't clip.</p>
+    <div class="fgrid two">
+      <div class="fcard"><p class="ft">DISTORTION</p><p class="fd">0–100% grit and drive on the whole mix.</p></div>
+      <div class="fcard"><p class="ft">FILTER</p><p class="fd">Tap <b>LP / HP</b> to switch low-pass and high-pass. Cutoff sweeps 200 Hz to 20 kHz and reads OFF at whichever end is neutral.</p></div>
+      <div class="fcard"><p class="ft">DELAY</p><p class="fd">0–100%. <b>SYNC</b> sets the delay time as a note value (1/4, 1/8, 1/8T, 1/16) from the tempo, so repeats land on the beat. <b>FREE</b> keeps a fixed 0.25 s.</p></div>
+      <div class="fcard"><p class="ft">REVERB</p><p class="fd">0–100%, from a touch of room to a wash.</p></div>
+    </div>
+    <div class="prose"><p>Every effects move can be undone, and one drag is one undo step. Sweeping the filter while the loop plays is one of the quickest ways to build tension.</p></div>
+  </div>
+</section>
+
+<section id="resample">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">09</span>RESAMPLE &amp; GO AGAIN</p>
+    <h2 class="h2">Turn the whole loop into one sound</h2>
+    <div class="prose">
+      <p><span class="kbd">Long-press a pad → RESAMPLE MIX TO THIS PAD</span>. PadFlip plays one full bar of your pattern, records everything playing (all four banks, with the master effects) and puts the result on that pad. Pads you tap during that bar are recorded too. A loop that was playing keeps playing.</p>
+      <p>That pad can then be trimmed, pitched, reversed and sequenced like any other. Put it on a step, pitch it up, trim it to its first hit, and the old loop becomes a new part.</p>
+      <ul>
+        <li>The button is disabled while the pattern is empty, since there'd be nothing to record. The line under it says so.</li>
+        <li>A resampled pad is a full bar long. Raise <strong>GATE</strong> if it cuts off in the sequencer.</li>
+      </ul>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>One bar of sixteen steps is a deliberate limit. Resampling is how you get past it: <b>bounce, then play the bounce</b>. Layer by layer, a beat gets denser than any single grid could hold, the way producers have long worked on hardware samplers.</p>
+    </div>
+  </div>
+</section>
+
+<section id="export" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">10</span>GET IT OUT</p>
+    <h2 class="h2">Three ways out</h2>
+    <p class="lead">At the bottom of the screen. Each opens the iOS share sheet: AirDrop, Files, Messages, or straight into another app.</p>
+    <div class="fgrid">
+      <div class="fcard"><p class="ft">EXPORT LOOP</p><p class="fd">One bar as a WAV, aligned to the downbeat and cut to an exact frame count, so it loops cleanly in a DAW. Then <b>SHARE AUDIO</b>. Disabled while the pattern is empty.</p></div>
+      <div class="fcard"><p class="ft">RECORD LIVE</p><p class="fd">Records the master output while you play, for as long as you like. Tap <b>STOP</b> to finish.</p></div>
+      <div class="fcard"><p class="ft">MAKE VIDEO</p><p class="fd">A vertical MP4 of the last export or take with a PadFlip title card, sized for short-form video. Then <b>SHARE VIDEO</b>.</p></div>
+    </div>
+    <div class="prose">
+      <p>Files are WAV rather than Apple's CAF, so they open anywhere, including Windows, Android and every DAW. They're named with the kind, tempo and time, like <span class="kbd">PadFlip Loop 100BPM 2026-10-17 1432.wav</span>.</p>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>A loop that's a few milliseconds long or short drifts after a few repeats in a DAW. The export is <b>exactly one bar to the sample</b>, starting on the downbeat, so it lines up on the first try.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">11</span>KEEP SEVERAL PROJECTS</p>
+    <h2 class="h2">As many projects as you like</h2>
+    <div class="prose">
+      <p>Open <span class="kbd">Settings → PROJECT → MANAGE</span>. Each project has its own four banks, its own pattern, and its own copies of every sample, so working on one never affects another.</p>
+      <ul>
+        <li><strong>Tap a project</strong> to open it. The one you were in is saved first.</li>
+        <li><strong>NEW PROJECT</strong> starts an empty one.</li>
+        <li><strong>•••</strong> on a row offers <strong>Rename</strong>, <strong>Duplicate</strong> and <strong>Delete</strong>. Duplicating copies the samples too, so the copy survives if you delete the original.</li>
+      </ul>
+      <p>PadFlip reopens whichever project you had open last.</p>
+    </div>
+    <div class="note">
+      <p class="nl">The one thing you can't undo</p>
+      <p>Deleting a project deletes its samples, including recordings that exist nowhere else. PadFlip asks first.</p>
+    </div>
+    <div class="fgrid two">
+      <div class="fcard"><p class="ft">CLEAR BANK</p><p class="fd">Empties the bank you're looking at, and its rows in the pattern. Asks first, and can be undone.</p></div>
+      <div class="fcard"><p class="ft">CLEAR ALL</p><p class="fd">Empties all four banks and the whole pattern. Asks first, and can be undone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="safety" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">12</span>UNDO &amp; SAFETY</p>
+    <h2 class="h2">Nothing to save, little to lose</h2>
+    <div class="prose">
+      <ul>
+        <li><strong>UNDO / REDO</strong> cover loading samples, chopping and moving cuts, every pad setting including trims, pattern edits, swing, gate and velocity, tempo, and effects, with <strong>50 steps</strong> of history.</li>
+        <li><strong>There's no save button.</strong> The project saves itself continuously, and again whenever the app goes to the background.</li>
+        <li><strong>Crash recovery</strong> is automatic. The app reopens as you left it.</li>
+        <li><strong>Background audio</strong>: your loop keeps playing when you switch apps or lock the screen.</li>
+        <li><strong>Interruptions</strong>: a phone call, an alarm, or another app taking over audio stops the transport cleanly; PLAY or a pad tap brings the sound back. Unplugging headphones or connecting Bluetooth mid-pattern is handled too.</li>
+      </ul>
+    </div>
+    <div class="why">
+      <p class="nl">Why it works this way</p>
+      <p>Everything runs <b>on the device</b>: no account, no sign-in, no cloud, no tracking. Nothing to sync means nothing to break, and your recordings never leave the phone unless you share them.</p>
+    </div>
+  </div>
+</section>
+
+<section id="settings">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">13</span>SETTINGS</p>
+    <h2 class="h2">The gear icon, top right</h2>
+    <div class="fgrid">
+      <div class="fcard"><p class="ft">Project</p><p class="fd">Which project is open, <b>MANAGE</b> to switch or create one, <b>CLEAR BANK</b>, <b>CLEAR ALL</b>, and <b>SHOW FIRST FLIP</b> to replay the walkthrough.</p></div>
+      <div class="fcard"><p class="ft">Appearance</p><p class="fd"><b>LIGHT</b>, <b>DARK</b>, or <b>SYSTEM</b>, which follows your device setting.</p></div>
+      <div class="fcard"><p class="ft">Layout</p><p class="fd"><b>TABBED</b> keeps PADS and STEPS as separate pages. <b>UNIFIED</b> stacks them on one scrolling page. Phone layouts only.</p></div>
+      <div class="fcard"><p class="ft">Tips</p><p class="fd"><b>ON</b> or <b>OFF</b> for the one-time tips, and <b>SHOW ALL TIPS AGAIN</b>.</p></div>
+      <div class="fcard"><p class="ft">Starter kit</p><p class="fd">The 64 sounds bundled across banks A–D that a new install opens with.</p></div>
+      <div class="fcard"><p class="ft">Sound library</p><p class="fd"><b>MANAGE</b> to browse, download or remove packs. See <a href="#library">Browse the library</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ipad" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">14</span>ON IPAD</p>
+    <h2 class="h2">The page, plus an inspector beside it</h2>
+    <div class="prose">
+      <p>With the extra width, the page you're on fills the main column and an inspector sits beside it: the selected slice on PADS (waveform, start / end / length, SNAP ZERO-X, gain), or the selected pad on STEPS (sample, length at the current gate, pitch). The MIX panel opens as a further sidebar instead of over the page, and pad size is capped so sixteen pads stay pad-sized.</p>
+      <p>All four orientations work. On a narrow iPad, such as a mini in portrait or any iPad in a narrow Split View, there isn't room for the inspector, so you get the phone layout. Phone layouts adapt to every iPhone size.</p>
+    </div>
+  </div>
+</section>
+
+<section id="trouble">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">15</span>TROUBLESHOOTING</p>
+    <h2 class="h2">If something's off</h2>
+    <div class="specsheet">
+      <div class="row"><span class="k">No sound at all</span><span class="v">Check the silent switch and the volume. If a red line in the header says audio couldn't start, something else has the output, usually a call; it clears once the sound comes back.</span></div>
+      <div class="row"><span class="k">A long pad cuts off</span><span class="v">GATE limits how long each step sounds. Raise it toward 100% for resampled pads and long one-shots.</span></div>
+      <div class="row"><span class="k">TRIM sounds the same</span><span class="v">Many drum hits fill only the start of their slice; the rest is silence. Drag E back to the end of the visible sound, not the end of the strip.</span></div>
+      <div class="row"><span class="k">Recording won't start</span><span class="v">PadFlip needs microphone access: iOS Settings → PadFlip → Microphone. Close anything else using the mic, like a call.</span></div>
+      <div class="row"><span class="k">Recording won't chop</span><span class="v">End the take with RECORD's STOP, beside IMPORT. The REC light in the header only shows status.</span></div>
+      <div class="row"><span class="k">A pack is missing</span><span class="v">Packs need a connection the first time. iOS may remove a downloaded pack when storage runs low; browsing to it downloads it again.</span></div>
+      <div class="row"><span class="k">Loop drifts in my DAW</span><span class="v">Set the DAW's tempo to the app's BPM. The file is exactly one bar with no silence at the start.</span></div>
+      <div class="row"><span class="k">"Long sample"</span><span class="v">Imports are capped at a minute so four banks of chopped audio can't run the phone out of memory. Trim the source to use a later part.</span></div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="sitefoot">
+  <div class="wrap">
+    <p>PADFLIP GUIDE · UPDATED 1 NOV 2026 · <a href="../">APPS BY MARIAN</a></p>
+    <p><a href="./">PADFLIP</a> · <a href="privacy.html">PRIVACY</a> · © 2026 MARIAN VRTIK</p>
+  </div>
+</footer>
+
+</body>
+</html>
