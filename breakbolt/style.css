@@ -2,7 +2,7 @@
 @font-face { font-family: "Chakra Petch"; src: url(assets/fonts/ChakraPetch-SemiBold.ttf) format("truetype"); font-weight: 500 600; font-display: swap; }
 @font-face { font-family: "Chakra Petch"; src: url(assets/fonts/ChakraPetch-Bold.ttf) format("truetype"); font-weight: 700; font-display: swap; }
 @font-face { font-family: "Share Tech Mono"; src: url(assets/fonts/ShareTechMono-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
-/* PadFlip site: the app's rig-console look. One dark theme on purpose,
+/* BreakBolt site: the app's rig-console look. One dark theme on purpose,
      like the app's own dark mode. Grid-paper panels (.scanbg) alternate
      with plain void sections. */
   :root {
