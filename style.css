@@ -211,7 +211,7 @@ h2 {
   transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.card:hover {
+.card-link:hover {
   border-color: var(--text-faint);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(23, 23, 28, 0.08);
