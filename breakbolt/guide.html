@@ -5,10 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BreakBolt Guide — every feature, in the order you make a beat</title>
 <meta name="description" content="The BreakBolt guide: loading and chopping sounds, shaping pads, building patterns, mixing, resampling and exporting, with the reasoning behind each design choice.">
-<meta name="theme-color" content="#0F3D30">
+<meta name="theme-color" content="#2E5E50" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4EDDF" media="(prefers-color-scheme: light)">
+<script>try{var t=localStorage.getItem("bb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="icon" href="assets/icon-512.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=20261121">
+<link rel="stylesheet" href="style.css?v=20261122">
 </head>
 <body>
 
@@ -22,6 +24,7 @@
       <a href="press.html" class="keep">Press</a>
       <a href="./#beta" class="keep">Beta</a>
       <a href="../" class="studio">Apps by Marian</a>
+      <button class="theme-toggle" type="button" aria-label="Switch light or dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
     </nav>
   </div>
 </header>
@@ -420,5 +423,25 @@
   </div>
 </footer>
 
+<script>
+// Light/dark switch: flips whatever is showing now and remembers it.
+(function () {
+  var b = document.querySelector(".theme-toggle");
+  if (!b) return;
+  function current() {
+    var t = document.documentElement.dataset.theme;
+    if (t) return t;
+    return matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  }
+  function label() { b.setAttribute("aria-label", current() === "light" ? "Switch to dark mode" : "Switch to light mode"); }
+  label();
+  b.addEventListener("click", function () {
+    var next = current() === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("bb-theme", next); } catch (e) {}
+    label();
+  });
+})();
+</script>
 </body>
 </html>

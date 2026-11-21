@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BreakBolt — Make beats from any sound</title>
 <meta name="description" content="BreakBolt is a sample-chopping beatmaker for iPhone and iPad. Four style kits, any sound you record or import chopped across 16 pads, a step sequencer, mixer, tape and effects. No account, no subscription.">
-<meta name="theme-color" content="#0F3D30">
+<meta name="theme-color" content="#2E5E50" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4EDDF" media="(prefers-color-scheme: light)">
+<script>try{var t=localStorage.getItem("bb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta property="og:title" content="BreakBolt — Make beats from any sound">
 <meta property="og:description" content="Chop any sound into 16 pads, tap out a beat, resample it, export it. On your iPhone or iPad.">
 <meta property="og:image" content="https://appsbymarian.dk/breakbolt/assets/icon-1024.png">
@@ -13,7 +15,7 @@
 <link rel="icon" href="assets/icon-512.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-Bold.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261121">
+<link rel="stylesheet" href="style.css?v=20261122">
 </head>
 <body>
 
@@ -27,6 +29,7 @@
       <a href="press.html" class="keep">Press</a>
       <a href="#beta" class="keep">Beta</a>
       <a href="../" class="studio">Apps by Marian</a>
+      <button class="theme-toggle" type="button" aria-label="Switch light or dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
     </nav>
   </div>
 </header>
@@ -186,5 +189,25 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+<script>
+// Light/dark switch: flips whatever is showing now and remembers it.
+(function () {
+  var b = document.querySelector(".theme-toggle");
+  if (!b) return;
+  function current() {
+    var t = document.documentElement.dataset.theme;
+    if (t) return t;
+    return matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  }
+  function label() { b.setAttribute("aria-label", current() === "light" ? "Switch to dark mode" : "Switch to light mode"); }
+  label();
+  b.addEventListener("click", function () {
+    var next = current() === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("bb-theme", next); } catch (e) {}
+    label();
+  });
+})();
+</script>
 </body>
 </html>
