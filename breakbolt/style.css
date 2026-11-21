@@ -378,8 +378,10 @@ img, video { max-width: 100%; }
 .press-video .ft { font-weight: 600; font-size: 1.05rem; margin: 0 0 8px; }
 .press-video .dim { margin: 0 0 18px; max-width: 60ch; }
 
-/* On every screen: iPad, open Duo, closed Duo side by side. */
-.screens { display: grid; grid-template-columns: 0.9fr 1.55fr 0.55fr; gap: 28px; align-items: end; margin-top: 36px; }
+/* On every screen: iPad, open Duo, closed Duo side by side. The closed
+   Duo's outer screen is the left half of the open one (466 vs 951pt wide,
+   about the same height), so its column is half the open one's. */
+.screens { display: grid; grid-template-columns: 0.9fr 1.5fr 0.755fr; gap: 28px; align-items: end; margin-top: 36px; }
 .screens figure { margin: 0; }
 .screens .device { width: 100%; padding: 7px; border-radius: 26px; }
 .screens .device .screen { border-radius: 19px; }
@@ -389,5 +391,5 @@ img, video { max-width: 100%; }
 .screens figcaption { margin-top: 12px; text-align: center; }
 @media (max-width: 760px) {
   .screens { grid-template-columns: 1fr; gap: 24px; }
-  .screens figure:nth-child(3) { width: 60%; margin: 0 auto; }
+  .screens figure:nth-child(3) { width: 51%; margin: 0 auto; }
 }
