@@ -15,7 +15,7 @@
 <link rel="icon" href="assets/icon-512.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-Bold.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261122">
+<link rel="stylesheet" href="style.css?v=20261123">
 </head>
 <body>
 
@@ -83,6 +83,36 @@
       <figure>
         <div class="device app"><div class="screen"><img src="assets/gm-fx.jpg" alt="The Mixer with a fader per pad, and the FX panel: distortion, crush, filter, delay, reverb and compress" loading="lazy"></div></div>
         <figcaption><span class="n">04 · Out</span><span class="t">Mix, tape and export</span><span class="d">A fader, pan, mute and solo per pad, six effects, a tape to record and loop your take, then a WAV, a live take or a vertical video.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="videos" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow">HEAR IT</p>
+    <h2 class="h2">Four kits and a tape</h2>
+    <p class="lead">Each kit video is one bank's own 16 pads and nothing else, played in the app. Tap one to play it with sound.</p>
+    <div class="reel">
+      <figure>
+        <div class="device"><div class="screen"><video controls playsinline preload="none" poster="assets/video/kit-boom-bap.jpg" aria-label="Boom-bap kit video"><source src="assets/video/kit-boom-bap.mp4" type="video/mp4"></video></div></div>
+        <figcaption><span class="t">Boom-bap kit</span><span class="d">Bank A · 90 BPM</span></figcaption>
+      </figure>
+      <figure>
+        <div class="device"><div class="screen"><video controls playsinline preload="none" poster="assets/video/kit-lo-fi.jpg" aria-label="Lo-fi kit video"><source src="assets/video/kit-lo-fi.mp4" type="video/mp4"></video></div></div>
+        <figcaption><span class="t">Lo-fi kit</span><span class="d">Bank B · 80 BPM</span></figcaption>
+      </figure>
+      <figure>
+        <div class="device"><div class="screen"><video controls playsinline preload="none" poster="assets/video/kit-house.jpg" aria-label="House kit video"><source src="assets/video/kit-house.mp4" type="video/mp4"></video></div></div>
+        <figcaption><span class="t">House kit</span><span class="d">Bank C · 124 BPM</span></figcaption>
+      </figure>
+      <figure>
+        <div class="device"><div class="screen"><video controls playsinline preload="none" poster="assets/video/kit-garage.jpg" aria-label="Garage kit video"><source src="assets/video/kit-garage.mp4" type="video/mp4"></video></div></div>
+        <figcaption><span class="t">Garage kit</span><span class="d">Bank D · 132 BPM</span></figcaption>
+      </figure>
+      <figure>
+        <div class="device"><div class="screen"><video controls playsinline preload="none" poster="assets/video/tape.jpg" aria-label="Tape video"><source src="assets/video/tape.mp4" type="video/mp4"></video></div></div>
+        <figcaption><span class="t">Tape</span><span class="d">Record, loop, brake</span></figcaption>
       </figure>
     </div>
   </div>
@@ -189,6 +219,12 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+<script>
+// One video at a time: starting one pauses the others.
+document.querySelectorAll(".reel video").forEach(function (v, _, all) {
+  v.addEventListener("play", function () { all.forEach(function (o) { if (o !== v) o.pause(); }); });
+});
+</script>
 <script>
 // Light/dark switch: flips whatever is showing now and remembers it.
 (function () {

@@ -427,6 +427,23 @@ img, video { max-width: 100%; }
 }
 
 /* Light/dark switch in the header. */
-.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; padding: 0; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--paper); cursor: pointer; flex-shrink: 0; }
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--paper); cursor: pointer; flex-shrink: 0; }
 .theme-toggle:hover { border-color: var(--signal); }
 .theme-toggle svg { width: 18px; height: 18px; }
+
+/* Promo videos: five in a row on a wide screen, a swipeable row on a phone. */
+.reel { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; margin-top: 36px; }
+.reel figure { margin: 0; min-width: 0; }
+/* The videos already show a phone, so no second phone frame: a plain
+   rounded card with the same pink glow. */
+.reel .device { width: 100%; padding: 0; border-radius: 18px; background: none; }
+.reel .device .screen { border-radius: 18px; }
+.reel video { background: #0F3D30; }
+.reel figcaption { margin-top: 14px; text-align: center; }
+.reel .t { display: block; font-weight: 700; }
+.reel .d { display: block; font-family: var(--mono); font-size: 0.78rem; color: var(--dim); letter-spacing: 0.04em; }
+@media (max-width: 900px) {
+  .reel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 18px; padding: 24px 16px 28px; margin-inline: -16px; scrollbar-width: none; }
+  .reel::-webkit-scrollbar { display: none; }
+  .reel figure { flex: 0 0 min(62vw, 240px); scroll-snap-align: center; }
+}
