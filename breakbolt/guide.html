@@ -138,7 +138,7 @@
     </div>
     <h3 class="h3">Key and tempo, found for you</h3>
     <div class="prose">
-      <p>After a sound loads into a bank, BreakBolt works out its key and tempo in the background. The key shows on the screen beside the tempo. <strong>Use 120</strong> (or whatever tempo it found) sets the sequencer to match in one tap. <strong>Scale lock</strong>, in the chop tools, keeps every pad's pitch inside that key.</p>
+      <p>After a sound loads into a bank, BreakBolt works out its key and tempo in the background. The key shows on the screen beside the tempo. <strong>Use 120</strong> (or whatever tempo it found) sets the sequencer to match in one tap. <strong>Scale lock</strong>, in the chop tools, limits pad pitch to steps of that key's scale; see <a href="#pitch">how Pitch works</a>.</p>
     </div>
   </div>
 </section>
@@ -210,7 +210,7 @@
         <p class="lead"><span class="kbd">Tap</span> a pad to play and select it. Pads don't cut each other off: two at once layer, and hitting one again restarts it. <span class="kbd">Long-press</span> opens its settings.</p>
         <div class="specsheet">
           <div class="row"><span class="k">Name</span><span class="v">The label on the pad. A library sound fills it in for you.</span></div>
-          <div class="row"><span class="k">Pitch</span><span class="v">−12 to +12 semitones. Changes the note and keeps the length. <span class="dim">With Scale lock on, it stays in the detected key.</span></span></div>
+          <div class="row"><span class="k">Pitch</span><span class="v">−12 to +12 semitones. Changes the note and keeps the length. <span class="dim">See <a href="#pitch">how Pitch works</a>.</span></span></div>
           <div class="row"><span class="k">Volume</span><span class="v">0–100%. The same as the pad's fader in the Mixer.</span></div>
           <div class="row"><span class="k">Pan</span><span class="v">L100 to R100; the middle reads C.</span></div>
           <div class="row"><span class="k">Stretch</span><span class="v">0.50× to 2.00×. Changes the length and keeps the note.</span></div>
@@ -222,6 +222,24 @@
         </div>
       </div>
       <figure class="gshot"><div class="device app"><div class="screen"><img src="assets/gm-pad.jpg" alt="A pad's settings: name, pitch, volume, pan, stretch, trim, reverse, resample and delete pad" loading="lazy"></div></div><figcaption>A pad's settings</figcaption></figure>
+    </div>
+    <h3 class="h3" id="pitch">How Pitch works</h3>
+    <div class="prose">
+      <p><strong>Pitch</strong> moves a pad in whole semitones, from −12 (an octave down) to +12 (an octave up); there's no fine-tuning in between. It belongs to the pad, so it applies everywhere the pad plays: a tap, the sequencer, a resample, an export, the tape. Clearing the bank or loading a new sample puts every pad back to 0.</p>
+      <p><strong>Scale lock</strong> (in the chop tools on Pads) is on until you turn it off. While it's on and the bank has a detected key, the slider only stops on steps that land on a note of that key's scale, counted from its root. Up and down differ, because the scale isn't the same shape both ways: in C minor, 2 down from C is Bb, in the key, while 3 down is A, which isn't. The pad sheet shows <strong>LOCKED TO C MIN</strong> (or the bank's key) while it applies.</p>
+    </div>
+    <div class="specsheet">
+      <div class="row"><span class="k">Minor key</span><span class="v">Up 2, 3, 5, 7, 8, 10, 12 semitones. Down 2, 4, 5, 7, 9, 10, 12.</span></div>
+      <div class="row"><span class="k">Major key</span><span class="v">Up 2, 4, 5, 7, 9, 11, 12 semitones. Down 1, 3, 5, 7, 8, 10, 12.</span></div>
+    </div>
+    <div class="prose">
+      <ul>
+        <li><strong>Exact on a pad that plays the key's root.</strong> In the Boom-bap kit (C minor) the Bass pad is a C, so every allowed step lands on a note of C minor.</li>
+        <li><strong>A guide on every other pad.</strong> Steps are counted from the key's root, not the pad's own note. The Bass 5th pad is a G: +2 is allowed and gives an A, which isn't in C minor. Trust your ears, or count from the pad's note.</li>
+        <li><strong>It uses the bank's key.</strong> A pad holding a library sound or a recording in another key is still locked to the key of the bank's sample.</li>
+        <li><strong>No key, no lock.</strong> Drums and noise have no key, so every semitone is allowed and the sheet shows no lock.</li>
+        <li><strong>It never changes what you set.</strong> Turning it on or off leaves existing pitches alone; it applies to the next move.</li>
+      </ul>
     </div>
     <h3 class="h3">How Pitch and Stretch sound</h3>
     <div class="prose">
