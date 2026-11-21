@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BreakBolt Guide — every feature, in the order you make a beat</title>
-<meta name="description" content="The BreakBolt guide: loading and chopping sounds, shaping pads, building patterns, mixing, resampling and exporting, with the reasoning behind each design choice.">
+<meta name="description" content="The BreakBolt guide: the four style kits, loading and chopping sounds, shaping pads, patterns, the mixer, the tape, effects, resampling and export, on iPhone, iPad and iPhone Duo.">
 <meta name="theme-color" content="#2E5E50" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#F4EDDF" media="(prefers-color-scheme: light)">
 <script>try{var t=localStorage.getItem("bb-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="icon" href="assets/icon-512.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=20261123">
+<link rel="stylesheet" href="style.css?v=20261124">
 </head>
 <body>
 
@@ -35,11 +35,11 @@
     <div>
       <p class="kicker">BREAKBOLT · GUIDE</p>
       <h1 class="headline">From one sound<br><span class="accent">to a finished beat.</span></h1>
-      <p class="sub">This guide follows the order you make a beat in: load a sound, chop it, shape the pads, build a pattern, mix, resample, export. Every feature is covered on the way, along with why it works the way it does.</p>
+      <p class="sub">Every feature, in the order you make a beat: play the kits, load a sound, chop it, shape the pads, build a pattern, mix it, put it on tape, export it. Along the way, why each part works the way it does.</p>
       <div class="stats">
         <div class="stat"><span class="n">64</span><span class="l">Pads, 4 banks</span></div>
-        <div class="stat"><span class="n">16</span><span class="l">Steps per bar</span></div>
-        <div class="stat"><span class="n">2,235</span><span class="l">Sounds included</span></div>
+        <div class="stat"><span class="n">4</span><span class="l">Bars, 16 or 32 steps</span></div>
+        <div class="stat"><span class="n">2,267</span><span class="l">Sounds included</span></div>
         <div class="stat"><span class="n">50</span><span class="l">Undo steps</span></div>
       </div>
     </div>
@@ -47,20 +47,21 @@
       <p class="toc-head">CONTENTS</p>
       <ol>
         <li><a href="#start"><span class="n">01</span>Find your way around</a></li>
-        <li><a href="#loading"><span class="n">02</span>Load a sound</a></li>
-        <li><a href="#library"><span class="n">03</span>Browse the library</a></li>
-        <li><a href="#chop"><span class="n">04</span>Chop it</a></li>
-        <li><a href="#keytempo"><span class="n">05</span>Lock key &amp; tempo</a></li>
+        <li><a href="#kits"><span class="n">02</span>The four kits</a></li>
+        <li><a href="#loading"><span class="n">03</span>Load a sound</a></li>
+        <li><a href="#library"><span class="n">04</span>Browse the library</a></li>
+        <li><a href="#chop"><span class="n">05</span>Chop it</a></li>
         <li><a href="#pads"><span class="n">06</span>Shape each pad</a></li>
         <li><a href="#pattern"><span class="n">07</span>Build a pattern</a></li>
-        <li><a href="#effects"><span class="n">08</span>Mix it</a></li>
-        <li><a href="#resample"><span class="n">09</span>Resample &amp; go again</a></li>
-        <li><a href="#export"><span class="n">10</span>Get it out</a></li>
-        <li><a href="#projects"><span class="n">11</span>Keep several projects</a></li>
-        <li><a href="#safety"><span class="n">12</span>Undo &amp; safety</a></li>
-        <li><a href="#settings"><span class="n">13</span>Settings</a></li>
-        <li><a href="#ipad"><span class="n">14</span>On iPad</a></li>
-        <li><a href="#trouble"><span class="n">15</span>Troubleshooting</a></li>
+        <li><a href="#mixer"><span class="n">08</span>Mix it</a></li>
+        <li><a href="#tape"><span class="n">09</span>Play it onto tape</a></li>
+        <li><a href="#effects"><span class="n">10</span>Add effects</a></li>
+        <li><a href="#resample"><span class="n">11</span>Resample &amp; go again</a></li>
+        <li><a href="#export"><span class="n">12</span>Get it out</a></li>
+        <li><a href="#projects"><span class="n">13</span>Projects, undo &amp; safety</a></li>
+        <li><a href="#settings"><span class="n">14</span>Settings</a></li>
+        <li><a href="#screens"><span class="n">15</span>iPad &amp; iPhone Duo</a></li>
+        <li><a href="#trouble"><span class="n">16</span>Troubleshooting</a></li>
       </ol>
     </nav>
   </div>
@@ -69,139 +70,133 @@
 <section id="start">
   <div class="wrap">
     <p class="eyebrow"><span class="n">01</span>FIND YOUR WAY AROUND</p>
-    <h2 class="h2">Two pages, one panel, and a beat already loaded</h2>
-    <div class="prose">
-      <p>BreakBolt opens with a starter kit across all four banks, so there's something to tap straight away. Everything lives on two pages and one panel:</p>
-      <ul>
-        <li><strong>PADS</strong> holds the source sound, its waveform with the cuts, and the 16 pads of the current bank. Tapping a pad plays it and selects it.</li>
-        <li><strong>STEPS</strong> holds the selected pad's 16 steps as a 4×4 page, with PLAY. <strong>ALL PADS</strong> opens every pad's row in one 16×16 grid with the full transport.</li>
-        <li><strong>MIX</strong> holds the master effects. It slides up over the page on a phone, so the pads stay reachable.</li>
-      </ul>
-      <p>The header holds the tempo (<span class="kbd">− / +</span>), the detected <strong>KEY</strong>, the <strong>REC</strong> light, and <strong>UNDO / REDO</strong>. There are <strong>4 banks</strong> (A–D), so <strong>64 pads</strong> in all.</p>
-    </div>
-
-    <h3 class="h3">The first flip</h3>
-    <p class="lead" style="margin-bottom:24px">On first launch, <strong class="hl">FIRST FLIP IN 60 SECONDS</strong> walks you through a whole beat in six steps. Each card highlights the control it means and sits on the other half of the screen, so it never covers it. A step completes when you do it.</p>
-    <ol class="steps">
-      <li><p><strong>LOAD A SAMPLE.</strong> Import a file, or tap RECORD and record into the bank.</p></li>
-      <li><p><strong>PLAY A SLICE.</strong> Tap a pad. Each one is a slice of that sample.</p></li>
-      <li><p><strong>MAKE A PATTERN.</strong> Open STEPS and tap a cell.</p></li>
-      <li><p><strong>SEE EVERY PAD.</strong> ALL PADS shows the whole bank at once, one row per pad.</p></li>
-      <li><p><strong>SHAPE THE SOUND.</strong> MIX opens the effects for the whole beat.</p></li>
-      <li><p><strong>EXPORT THE LOOP.</strong> Save it when the pattern is worth keeping.</p></li>
-    </ol>
-    <div class="note">
-      <p class="nl">Tips</p>
-      <p>After the walkthrough, a one-line <b>TIP</b> explains each of fifteen controls the first time you touch it: pad settings, chop modes, zoom, lock markers, USE BPM, scale lock, gate, swing, velocity, MET, RND, CLR, MIX, RECORD LIVE and EXPORT LOOP. <b>GOT IT</b> dismisses it for good. <b>SKIP</b> closes the walkthrough; Settings → <b>SHOW FIRST FLIP</b> brings it back, and Settings → <b>TIPS</b> switches tips off or shows them all again.</p>
-    </div>
-    <div class="why">
-      <p class="nl">Why it opens on a kit</p>
-      <p>Many beat apps open on an empty project and a manual. BreakBolt opens on a playable kit, and the walkthrough has you make a beat with it, so <b>you play something before you open a menu</b>. Each tip appears once, the first time you touch its control.</p>
+    <h2 class="h2">Five pages and one transport row</h2>
+    <div class="split">
+      <div class="prose">
+        <p>BreakBolt opens with a kit in every bank, so there's something to play straight away. Five pages sit along the bottom:</p>
+        <ul>
+          <li><strong>Pads</strong>: the source sound, how it's cut up, and the 16 pads of the current bank. Tapping a pad plays it and selects it.</li>
+          <li><strong>Steps</strong>: the selected pad's pattern. <strong>All pads</strong> opens every pad's row in one grid.</li>
+          <li><strong>Mixer</strong>: volume, pan, mute and solo for each pad.</li>
+          <li><strong>Tape</strong>: a recording of everything you hear, to loop, slow down, or chop back onto the pads.</li>
+          <li><strong>FX</strong>: effects on the whole beat. A panel over the page on a phone, a sidebar on iPad.</li>
+        </ul>
+        <p><strong>Undo</strong>, <strong>Redo</strong>, <strong>Play</strong>, <strong>Import</strong> and <strong>Rec</strong> sit in one row on every page. The screen above it shows what's loaded, the tempo and the key. <strong>Export</strong>, top right, is the way out. There are <strong>4 banks</strong> (A–D) of 16 pads, <strong>64 pads</strong> in all.</p>
+        <h3 class="h3">The first flip and tips</h3>
+        <p>The first launch opens <strong>FIRST FLIP IN 60 SECONDS</strong>, six steps from a sample to an exported loop. Each card points at its control and sits on the other half of the screen, so it never covers it, and a step completes when you do it. <strong>SKIP</strong> closes it; <span class="kbd">Settings → SHOW FIRST FLIP</span> brings it back.</p>
+        <p>After that, a one-line <strong>TIP</strong> appears the first time you use a control. <strong>GOT IT</strong> dismisses it for good. <span class="kbd">Settings → TIPS</span> turns them off, or shows them all again.</p>
+      </div>
+      <figure class="gshot"><div class="device app"><div class="screen"><img src="assets/gm-pads.jpg" alt="The Pads page with the Boom-bap kit: a chopped waveform above 16 named pads" loading="lazy"></div></div><figcaption>Pads, with the Boom-bap kit</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section id="loading" class="scanbg">
+<section id="kits" class="scanbg">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">02</span>LOAD A SOUND</p>
-    <h2 class="h2">Five ways onto a pad</h2>
-    <p class="lead">Mix them freely within one bank. The first fills the whole bank; the others touch one pad.</p>
-    <div class="fgrid">
-      <div class="fcard"><p class="tag">Whole bank</p><p class="ft">Chop a sample</p><p class="fd"><b>RECORD</b> or <b>IMPORT</b>, under the pads. One sound is sliced across all 16 pads of the current bank. Tap <b>STOP</b> to end a recording.</p></div>
-      <div class="fcard"><p class="tag">Empty pad</p><p class="ft">Record onto one pad</p><p class="fd"><span class="kbd">Long-press</span> an empty pad to record a one-shot straight onto it.</p></div>
-      <div class="fcard"><p class="tag">Empty pad</p><p class="ft">Pick from the library</p><p class="fd"><span class="kbd">Tap</span> an empty pad to browse the Sound Library and assign a sound to it.</p></div>
-      <div class="fcard"><p class="tag">Loaded pad</p><p class="ft">Replace what's there</p><p class="fd"><span class="kbd">Long-press</span> a loaded pad and choose <b>RECORD OVER THIS PAD</b> or <b>CHOOSE FROM LIBRARY</b>.</p></div>
-      <div class="fcard"><p class="tag">Loaded pad</p><p class="ft">Resample your mix</p><p class="fd"><b>RESAMPLE MIX TO THIS PAD</b> records one bar of the live pattern, effects included, onto the pad. See <a href="#resample">Resample</a>.</p></div>
-      <div class="fcard"><p class="tag">Good to know</p><p class="ft">Your files are copied in</p><p class="fd">Recorded and imported audio is copied into the app, so deleting the original from Files later can't break your project.</p></div>
-    </div>
-    <div class="prose">
-      <ul>
-        <li>RECORD and IMPORT replace the bank's auto-chopped pads. Pads you recorded onto or filled from the library are kept.</li>
-        <li>With the click on (<span class="kbd">Steps → Click</span>), recording onto a pad counts in one bar first and starts on the downbeat. The bank Rec button starts immediately.</li>
-        <li>A sample can be up to <strong>three minutes</strong> long (two on iPhones with less memory). A longer file opens a picker: drag the window over the part you want, tap <strong>Listen</strong> to hear it, then <strong>Use this part</strong>. A recording shows a timer and its limit, and stops by itself when it gets there. A sound recorded onto a single pad can be up to one minute.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="library">
-  <div class="wrap">
-    <p class="eyebrow"><span class="n">03</span>BROWSE THE LIBRARY</p>
-    <h2 class="h2">2,235 sounds, all included</h2>
-    <div class="prose">
-      <p>The library holds <strong>24 sounds built into the app</strong>, always available offline, plus <strong>72 packs</strong> you download on demand from Apple's servers. Open it by tapping an empty pad, by choosing <strong>CHOOSE FROM LIBRARY</strong> on a loaded one, or from <span class="kbd">Settings → SOUND PACKS → MANAGE</span>.</p>
-    </div>
+    <p class="eyebrow"><span class="n">02</span>THE FOUR KITS</p>
+    <h2 class="h2">One style in each bank</h2>
+    <p class="lead">A new project starts with a kit in every bank. Each is one style, in one key, with its own instrument, so the bass and the melody fit together.</p>
     <div class="specsheet">
-      <div class="row"><span class="k">Percussion</span><span class="v">1,227 sounds</span></div>
-      <div class="row"><span class="k">FX</span><span class="v">556 sounds</span></div>
-      <div class="row"><span class="k">Melodic</span><span class="v">370 sounds</span></div>
-      <div class="row"><span class="k">Bass</span><span class="v">58 sounds</span></div>
-      <div class="row"><span class="k">Kicks</span><span class="v">24 sounds</span></div>
+      <div class="row"><span class="k">A · Boom-bap</span><span class="v">C minor, 85–95 BPM. Jazz guitar and horns.</span></div>
+      <div class="row"><span class="k">B · Lo-fi</span><span class="v">F major, 70–85 BPM. Electric piano and flute.</span></div>
+      <div class="row"><span class="k">C · House</span><span class="v">A minor, 120–126 BPM. House organ and bell.</span></div>
+      <div class="row"><span class="k">D · Garage</span><span class="v">D minor, 130–135 BPM. Supersaw synth and a lead.</span></div>
     </div>
     <div class="prose">
+      <p>The layout is the same in every bank, so your thumbs learn it once:</p>
       <ul>
-        <li><strong>One pack at a time.</strong> Downloading Cowbell Kit doesn't pull in the other percussion packs.</li>
-        <li><strong>Search</strong> across every pack, downloaded or not, and <strong>preview</strong> any sound with ▶ before <strong>USE</strong> assigns it.</li>
-        <li><strong>CANCEL</strong> stops a download; a stalled one gives up after a while and offers <strong>RETRY</strong>.</li>
-        <li><strong>REMOVE DOWNLOAD</strong> frees the space. Browsing back to the pack downloads it again.</li>
+        <li><strong>Pads 1–4</strong>: kick, snare, clap, closed hat. A beat from the top row alone.</li>
+        <li><strong>Pads 5–8</strong>: open hat, two percussion sounds, tom.</li>
+        <li><strong>Pads 9–11</strong>: bass, bass on the fifth, a chord.</li>
+        <li><strong>Pads 12–16</strong>: a note, a higher note, a lead sound, a rise and an impact.</li>
       </ul>
-      <p>The built-in melodic set is tuned: the mallets form one interval spread and the bells a C major chord, so they sit in tune with each other.</p>
-    </div>
-    <div class="why">
-      <p class="nl">Why every pack is included</p>
-      <p>Selling sound packs one by one is common in this category. Here <b>every pack is in the price, including packs added later</b>, with no in-app purchases. Packs download individually so a phone with little space only stores what you use.</p>
+      <p>Each pad shows its name (Kick, Gtr chord, Horns) until you move a cut or change the chop, because then the slices no longer hold those sounds. The drums are recordings from the Sound Library; the bass, the instruments, the rise and the impact are made in BreakBolt and are in the library too, named by kit: Dust is boom-bap, Wool lo-fi, Floor house, Skip garage.</p>
     </div>
   </div>
 </section>
 
-<section id="chop" class="scanbg">
+<section id="loading">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">04</span>CHOP IT</p>
-    <h2 class="h2">How a sample becomes sixteen pads</h2>
-    <p class="lead">Choose under <span class="kbd">CHOP</span>, just below the waveform. Switching re-chops immediately, and you can undo it.</p>
+    <p class="eyebrow"><span class="n">03</span>LOAD A SOUND</p>
+    <h2 class="h2">Six ways onto a pad</h2>
+    <p class="lead">The first two fill the whole bank. The rest touch one pad.</p>
     <div class="fgrid">
-      <div class="fcard"><p class="ft">EQUAL</p><p class="fd">Sixteen slices of identical length. Predictable, and works on anything.</p></div>
-      <div class="fcard"><p class="ft">HITS</p><p class="fd">Slices start on detected transients, spread across the whole sample, so every pad begins on a real hit. Best for drums. Falls back to an even chop if it can't find enough hits.</p></div>
-      <div class="fcard"><p class="ft">BEATS</p><p class="fd">Slices land on sixteenth notes at the detected tempo. Best for loops already in time. Falls back to an even chop when no tempo was found.</p></div>
+      <div class="fcard"><p class="tag">Whole bank</p><p class="ft">Rec</p><p class="fd">Records the mic into the current bank and chops it across all 16 pads. Tap <b>Stop</b> to finish. A timer shows how long the take has run.</p></div>
+      <div class="fcard"><p class="tag">Whole bank</p><p class="ft">Import</p><p class="fd">Any audio file from Files, chopped the same way.</p></div>
+      <div class="fcard"><p class="tag">Empty pad</p><p class="ft">Pick from the library</p><p class="fd"><span class="kbd">Tap</span> an empty pad to browse the Sound Library for it.</p></div>
+      <div class="fcard"><p class="tag">Empty pad</p><p class="ft">Record onto one pad</p><p class="fd"><span class="kbd">Long-press</span> an empty pad to record straight onto it.</p></div>
+      <div class="fcard"><p class="tag">Loaded pad</p><p class="ft">Replace what's there</p><p class="fd"><span class="kbd">Long-press</span> a pad, then <b>RECORD OVER THIS PAD</b> or <b>CHOOSE FROM LIBRARY</b>.</p></div>
+      <div class="fcard"><p class="tag">Loaded pad</p><p class="ft">Resample your mix</p><p class="fd"><b>RESAMPLE MIX TO THIS PAD</b> records the whole pattern onto the pad. See <a href="#resample">Resample</a>.</p></div>
     </div>
+    <div class="prose">
+      <ul>
+        <li>Rec and Import replace the bank's chopped pads. Pads you recorded onto or filled from the library are kept.</li>
+        <li>A sample can be up to <strong>three minutes</strong> long (two on iPhones with less memory). A longer file opens a picker: drag the window over the part you want, tap <strong>Listen</strong>, then <strong>Use this part</strong>. A recording stops by itself at the limit. A sound recorded onto one pad can be up to a minute.</li>
+        <li>With the click on (<span class="kbd">Steps → Click</span>), recording onto a pad counts in one bar and starts on the downbeat. The bank's Rec starts at once.</li>
+        <li>Recorded and imported audio is <strong>copied into the app</strong>, so deleting the original from Files later can't break your project.</li>
+      </ul>
+    </div>
+    <h3 class="h3">Key and tempo, found for you</h3>
+    <div class="prose">
+      <p>After a sound loads into a bank, BreakBolt works out its key and tempo in the background. The key shows on the screen beside the tempo. <strong>Use 120</strong> (or whatever tempo it found) sets the sequencer to match in one tap. <strong>Scale lock</strong>, in the chop tools, keeps every pad's pitch inside that key.</p>
+    </div>
+  </div>
+</section>
 
+<section id="library" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">04</span>BROWSE THE LIBRARY</p>
+    <h2 class="h2">2,267 sounds, all included</h2>
+    <div class="split">
+      <div>
+        <div class="prose">
+          <p><strong>56 sounds are built into the app</strong> and work offline, among them the kits' bass, instruments, rises and impacts. The rest come in <strong>72 packs</strong> you download one at a time from Apple's servers. Open the library by tapping an empty pad, with <strong>CHOOSE FROM LIBRARY</strong> on a loaded one, or from <span class="kbd">Settings → SOUND PACKS → MANAGE</span>.</p>
+        </div>
+        <div class="specsheet">
+          <div class="row"><span class="k">Percussion</span><span class="v">1,227 sounds</span></div>
+          <div class="row"><span class="k">FX</span><span class="v">564 sounds</span></div>
+          <div class="row"><span class="k">Melodic</span><span class="v">386 sounds</span></div>
+          <div class="row"><span class="k">Bass</span><span class="v">66 sounds</span></div>
+          <div class="row"><span class="k">Kicks</span><span class="v">24 sounds</span></div>
+        </div>
+        <div class="prose">
+          <ul>
+            <li><strong>One pack at a time.</strong> Downloading Cowbell Kit doesn't pull in the other percussion packs, and a download can be cancelled from its row.</li>
+            <li><strong>Search</strong> every pack, downloaded or not. <strong>▶</strong> previews a sound; <strong>Use</strong> puts it on the pad and names the pad after it.</li>
+            <li><strong>REMOVE DOWNLOAD</strong> frees the space. Browsing back downloads it again.</li>
+            <li>Every pack is included in the price, including packs added later. No in-app purchases.</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="gshot"><div class="device app"><div class="screen"><img src="assets/gm-library.jpg" alt="The Sound Library: categories, search and a list of packs to download" loading="lazy"></div></div><figcaption>The Sound Library, in light mode</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="chop">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">05</span>CHOP IT</p>
+    <h2 class="h2">How a sound becomes sixteen pads</h2>
+    <p class="lead">On Pads, the screen shows the source. <strong class="hl">CHOP</strong> opens the tools and three ways to divide it.</p>
+    <div class="fgrid">
+      <div class="fcard"><p class="tag">Predictable</p><p class="ft">Equal</p><p class="fd">Sixteen slices of the same length. Ignores the music entirely.</p></div>
+      <div class="fcard"><p class="tag">Drums</p><p class="ft">Hits</p><p class="fd">Each slice starts on a detected hit, so every pad starts on a sound. Falls back to Equal if it finds too few.</p></div>
+      <div class="fcard"><p class="tag">Loops</p><p class="ft">Beats</p><p class="fd">Slices land on sixteenth notes at the detected tempo. Falls back to Equal with no tempo.</p></div>
+    </div>
     <h3 class="h3">Move the cuts by hand</h3>
-    <div class="specsheet">
-      <div class="row"><span class="k">Drag a handle</span><span class="v">Moves that cut. A cut can't cross its neighbours. <span class="dim">Handle 01 is pinned to the start.</span></span></div>
-      <div class="row"><span class="k">Tap the waveform</span><span class="v">Moves the nearest cut to where you tapped.</span></div>
-      <div class="row"><span class="k">ZOOM</span><span class="v">1×, 2×, 4× or 8×. <span class="dim">Drag the waveform to scroll along it; handles still drag and taps still move a cut.</span></span></div>
-      <div class="row"><span class="k">LOCK MARKERS</span><span class="v">Taps only select, so a stray touch can't move anything. <span class="dim">Handles still drag.</span></span></div>
-      <div class="row"><span class="k">SNAP ZERO-X</span><span class="v">On a wide iPad, nudges the selected cut to the nearest zero crossing so it starts without a click.</span></div>
-    </div>
     <div class="prose">
       <ul>
-        <li>Changing the chop mode discards hand-placed cuts.</li>
-        <li>Pads you recorded onto or filled from the library <strong>are kept</strong> when you re-chop.</li>
-        <li>The waveform draws what each pad really plays. A pad's trimmed start and end are faded inside its slice, and a pad holding its own sound has its whole slice faded.</li>
-        <li>A bank filled pad by pad has no source to chop, so the waveform and CHOP row are hidden, and the status line counts the loaded pads.</li>
+        <li><strong>Drag a numbered handle</strong> to move that cut. Cuts can't cross each other, and 01 stays at the start.</li>
+        <li><strong>Tap the waveform</strong> to move the nearest cut there.</li>
+        <li><strong>Lock markers</strong> makes taps select only, so a stray touch moves nothing. Handles still drag.</li>
+        <li><strong>Zoom</strong> 2×, 4× or 8×, then drag the waveform to scroll along it.</li>
+        <li>Changing the chop mode replaces hand-placed cuts. Either way, <strong>Undo</strong> brings them back.</li>
       </ul>
+      <p>The waveform shows what each pad really plays: a pad's trimmed-off parts are faded, and a pad that holds a recording or a library sound has its whole slice faded.</p>
     </div>
     <div class="why">
-      <p class="nl">Why it chops for you</p>
-      <p>Chopping by hand means placing sixteen markers by ear before anything is playable. HITS and BEATS do that first pass for you from the audio itself, so <b>the kit plays the moment it loads</b>, and the handles are there for the cuts you want to fix.</p>
-    </div>
-  </div>
-</section>
-
-<section id="keytempo">
-  <div class="wrap">
-    <p class="eyebrow"><span class="n">05</span>LOCK KEY &amp; TEMPO</p>
-    <h2 class="h2">Key and tempo, detected on load</h2>
-    <div class="prose">
-      <p>After a whole-bank load, BreakBolt analyses the sample in the background. The key shows in the header, and the row above the pads offers two controls:</p>
-    </div>
-    <div class="fgrid two">
-      <div class="fcard"><p class="ft">USE 120 BPM</p><p class="fd">Shows the tempo it found. Tap it to set the pattern to that tempo, so the beat and the sample line up. It can be undone, and tapped again any time to re-sync.</p></div>
-      <div class="fcard"><p class="ft">SCALE LOCK</p><p class="fd">While it's on, pitching a pad snaps to the nearest note in the detected key. The pad sheet shows <b>LOCKED TO</b> and the key. Turn it off for full chromatic control.</p></div>
-    </div>
-    <div class="why">
-      <p class="nl">Why Scale Lock</p>
-      <p>Pitching chops is how a melody comes out of a sample, and it's where beginners drift out of key. Scale Lock keeps every pitched pad inside the sample's own key, so <b>you can play melodies without knowing music theory</b>.</p>
+      <p class="nl">Why moving a cut changes two pads</p>
+      <p>A cut is the end of one slice and the start of the next, so moving it lengthens one pad and shortens its neighbour. To shorten <b>one</b> pad and leave the rest alone, use <b>TRIM</b> in its settings instead.</p>
     </div>
   </div>
 </section>
@@ -209,216 +204,229 @@
 <section id="pads" class="scanbg">
   <div class="wrap">
     <p class="eyebrow"><span class="n">06</span>SHAPE EACH PAD</p>
-    <h2 class="h2">Seven settings on every pad</h2>
-    <p class="lead"><span class="kbd">Tap</span> to play. Pads never cut each other off: two at once layer, and re-hitting one restarts it. Each loaded pad shows a small waveform and its length. <span class="kbd">Long-press</span> a loaded pad to open its settings.</p>
-    <div class="specsheet">
-      <div class="row"><span class="k">NAME THIS PAD</span><span class="v">A short label shown on the pad. <span class="dim">Assigning a library sound fills it in.</span></span></div>
-      <div class="row"><span class="k">PITCH</span><span class="v">−12 to +12 semitones. <span class="dim">Snaps to the key while Scale Lock is on.</span></span></div>
-      <div class="row"><span class="k">VOLUME</span><span class="v">0–100%.</span></div>
-      <div class="row"><span class="k">PAN</span><span class="v">L100 to R100. <span class="dim">Centre reads C.</span></span></div>
-      <div class="row"><span class="k">STRETCH</span><span class="v">0.50× to 2.00×. <span class="dim">Changes speed without changing pitch.</span></span></div>
-      <div class="row"><span class="k">TRIM</span><span class="v">Cuts this pad's start or end. <span class="dim">See below.</span></span></div>
-      <div class="row"><span class="k">REVERSE</span><span class="v">Plays the pad backwards.</span></div>
-      <div class="row"><span class="k">Replace the sound</span><span class="v"><b>RESAMPLE MIX TO THIS PAD</b>, <b>RECORD OVER THIS PAD</b> or <b>CHOOSE FROM LIBRARY</b>.</span></div>
+    <h2 class="h2">Settings for every pad</h2>
+    <div class="split">
+      <div>
+        <p class="lead"><span class="kbd">Tap</span> a pad to play and select it. Pads don't cut each other off: two at once layer, and hitting one again restarts it. <span class="kbd">Long-press</span> opens its settings.</p>
+        <div class="specsheet">
+          <div class="row"><span class="k">Name</span><span class="v">The label on the pad. A library sound fills it in for you.</span></div>
+          <div class="row"><span class="k">Pitch</span><span class="v">−12 to +12 semitones. Changes the note and keeps the length. <span class="dim">With Scale lock on, it stays in the detected key.</span></span></div>
+          <div class="row"><span class="k">Volume</span><span class="v">0–100%. The same as the pad's fader in the Mixer.</span></div>
+          <div class="row"><span class="k">Pan</span><span class="v">L100 to R100; the middle reads C.</span></div>
+          <div class="row"><span class="k">Stretch</span><span class="v">0.50× to 2.00×. Changes the length and keeps the note.</span></div>
+          <div class="row"><span class="k">Trim</span><span class="v">S and E handles cut this pad's start and end. See below.</span></div>
+          <div class="row"><span class="k">Reverse</span><span class="v">Plays the pad backwards.</span></div>
+          <div class="row"><span class="k">Resample mix</span><span class="v">Records the whole pattern onto this pad. See <a href="#resample">Resample</a>.</span></div>
+          <div class="row"><span class="k">Record over / Library</span><span class="v">Replaces the pad's sound.</span></div>
+          <div class="row"><span class="k">Delete pad</span><span class="v">Empties the pad. Its steps stay, and it stays empty even if the bank is chopped again. <span class="dim">Undo brings the sound back.</span></span></div>
+        </div>
+      </div>
+      <figure class="gshot"><div class="device app"><div class="screen"><img src="assets/gm-pad.jpg" alt="A pad's settings: name, pitch, volume, pan, stretch, trim, reverse, resample and delete pad" loading="lazy"></div></div><figcaption>A pad's settings</figcaption></figure>
     </div>
-
-    <h3 class="h3">TRIM: shorten one pad, leave the rest</h3>
+    <h3 class="h3">How Pitch and Stretch sound</h3>
     <div class="prose">
-      <p>TRIM shows the pad's own sound in detail, so even a 0.2-second hit fills the strip. Drag sideways to move <strong>S</strong> (start) or <strong>E</strong> (end). A drag takes whichever handle is nearer, so you don't have to hit the thin line. The faded parts don't play, and each cut gets a few milliseconds of fade so it never clicks.</p>
-      <ul>
-        <li>The readout shows the kept range, such as <span class="kbd">0:00.081 – 0:00.303</span>, and <span class="kbd">PLAYS 0:00.222</span>.</li>
-        <li><strong>PLAY</strong> auditions the pad; <strong>RESET</strong> restores the full length.</li>
-        <li>In the sequencer, GATE counts from the trimmed start.</li>
-        <li>Giving the pad a new sound resets its trim. The trim is saved and undoable.</li>
-      </ul>
+      <p>Pitch and Stretch work separately: Pitch moves the note and keeps the length, Stretch changes the length and keeps the note. To do that, BreakBolt rebuilds the sound from many short overlapping pieces. Small moves are clean. Big moves, especially on drums, soften the attack and add a slightly smeared, hollow colour. That is how the two controls work, not an added effect.</p>
+      <p>An old hardware sampler works differently: pitching up plays the sample faster, so it gets shorter too. The tape works that way: <strong>½×</strong> and <strong>2×</strong> on the Tape page change speed and pitch together.</p>
     </div>
-    <div class="why">
-      <p class="nl">Why TRIM exists</p>
-      <p>Moving a cut on the waveform always changes two pads: one gets longer as the next gets shorter. TRIM is the other half: <b>it cuts one pad without touching its neighbours</b>, so you can tighten a snare's tail without shifting the hat after it.</p>
+    <h3 class="h3">Trim: shorten one pad, leave the rest</h3>
+    <div class="prose">
+      <p>Trim shows the pad's own sound up close, so even a short hit fills the strip. Drag sideways to move <strong>S</strong> (start) or <strong>E</strong> (end); a drag takes whichever handle is nearer. The faded parts don't play, and each cut gets a few milliseconds of fade so it never clicks. <strong>PLAY</strong> auditions the pad, <strong>RESET</strong> restores the full length. Only this pad changes; the cuts on the source stay where they are. A new sound on the pad resets the trim.</p>
     </div>
-    <div class="prose" style="margin-top:20px"><p>Pads give a light haptic tap when played, following your iPhone's system haptics setting. With VoiceOver on, each pad reads out its number, its name, and whether it holds a sound.</p></div>
   </div>
 </section>
 
 <section id="pattern">
   <div class="wrap">
     <p class="eyebrow"><span class="n">07</span>BUILD A PATTERN</p>
-    <h2 class="h2">Sixteen steps, one bar, two views</h2>
-    <p class="lead">Tap a pad to select it, then open <strong class="hl">STEPS</strong>. Step 1 is top-left, reading across, so the four rows are the four beats. Tap a cell to turn it on; the bar inside a lit cell is that step's velocity. The playhead lights the step that's sounding.</p>
-    <div class="fgrid two">
-      <div class="fcard"><p class="tag">One pad</p><p class="ft">STEPS FOR THIS PAD</p><p class="fd">The selected pad's 16 steps as a 4×4 page, big enough for thumbs. Pick another pad on PADS to program it.</p></div>
-      <div class="fcard"><p class="tag">Every pad</p><p class="ft">ALL PADS</p><p class="fd">Every pad's row in one 16×16 grid with the full transport. <b>THIS PAD</b> returns to the 4×4 page.</p></div>
+    <h2 class="h2">Up to four bars, 16 or 32 steps a bar</h2>
+    <div class="split">
+      <div>
+        <p class="lead">Select a pad, then open <strong class="hl">Steps</strong>. Step 1 is top-left, reading across, so each row is a beat. Tap a cell to turn it on; the bar inside a lit cell is its velocity. The playhead outlines the step that's sounding.</p>
+        <div class="specsheet">
+          <div class="row"><span class="k">Bars</span><span class="v">1, 2 or 4. A longer pattern starts as a copy of the one you had. <b>Bar 1</b>, <b>Bar 2</b>… choose which bar the grid shows; a dot marks the one playing.</span></div>
+          <div class="row"><span class="k">Steps</span><span class="v">16 a bar (a 4×4 page) or 32 (an 8×4 page).</span></div>
+          <div class="row"><span class="k">Tempo</span><span class="v">60 to 180, with − / + on the screen. <span class="dim">A change mid-loop keeps the beat's phase, so it never stumbles.</span></span></div>
+          <div class="row"><span class="k">Click</span><span class="v">A metronome, accented on the bar, and the count-in for recording. <span class="dim">Never in an export or on tape.</span></span></div>
+          <div class="row"><span class="k">Random</span><span class="v">Random hits on pads that hold a sound, weighted toward downbeats.</span></div>
+          <div class="row"><span class="k">Clear</span><span class="v">Clears every step. <span class="dim">Undo brings them back.</span></span></div>
+          <div class="row"><span class="k">All pads</span><span class="v">Every pad's row in one grid, for the bar on screen. The same pattern the 4×4 edits.</span></div>
+        </div>
+      </div>
+      <figure class="gshot"><div class="device app"><div class="screen"><img src="assets/gm-steps.jpg" alt="The Steps page: the kick's steps in a 4×4 grid, with bars, steps per bar, swing, gate and velocity" loading="lazy"></div></div><figcaption>Steps, with a 4-bar pattern</figcaption></figure>
     </div>
-
-    <h3 class="h3">Transport</h3>
-    <div class="specsheet">
-      <div class="row"><span class="k">PLAY / STOP</span><span class="v">Step 1 sounds the moment you press PLAY.</span></div>
-      <div class="row"><span class="k">BPM</span><span class="v">60 to 180. <span class="dim">Changing tempo mid-loop keeps the beat's phase, so it speeds up or slows down without stumbling.</span></span></div>
-      <div class="row"><span class="k">MET</span><span class="v">Metronome, clicking every beat with an accent on the bar, and the count-in for recording. <span class="dim">Never included in an export or recording.</span></span></div>
-      <div class="row"><span class="k">RND</span><span class="v">Randomises the pattern, weighted toward downbeats, using loaded pads only. <span class="dim">UNDO takes it back.</span></span></div>
-      <div class="row"><span class="k">CLR</span><span class="v">Clears every step. <span class="dim">UNDO brings it back.</span></span></div>
-    </div>
-
     <h3 class="h3">Groove</h3>
-    <div class="fgrid">
-      <div class="fcard"><p class="ft">SWING</p><p class="fd">0–100%. Pushes every second sixteenth later, up to half a step, for a looser, shuffled feel. The playhead stays on the grid; only the sound moves.</p></div>
-      <div class="fcard"><p class="ft">GATE</p><p class="fd">How long a step may sound, from 5% of a step to the whole pad. Lower is tighter and choppier. Short gates fade out so they don't click. Long sounds need it near 100%.</p></div>
-      <div class="fcard"><p class="ft">VEL</p><p class="fd">Level for the selected pad's steps. Moving it sets every lit step of that pad and the level new steps get.</p></div>
+    <div class="specsheet">
+      <div class="row"><span class="k">Swing</span><span class="v">0–100%. Delays every offbeat sixteenth, up to half a step, and feels the same at 16 or 32 steps. <span class="dim">The playhead stays on the grid; only the sound moves.</span></span></div>
+      <div class="row"><span class="k">Gate</span><span class="v">How much of a step a hit may sound, from 5% to all of it, with a short fade so it doesn't click.</span></div>
+      <div class="row"><span class="k">Velocity</span><span class="v">The level of the selected pad's steps, and the level new steps get.</span></div>
     </div>
     <div class="why">
-      <p class="nl">Why the audio clock</p>
-      <p>The sequencer is scheduled against the <b>audio clock</b>, not the screen, so the beat stays in time while you scroll, open panels, switch apps or lock the phone. All 64 pads stay live whichever bank is on screen, so one pattern drives every bank at once.</p>
+      <p class="nl">Why it holds time</p>
+      <p>Every step is scheduled on the audio clock, not the screen, so the beat stays steady while you scroll, open a panel, switch apps or lock the phone.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mixer" class="scanbg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">08</span>MIX IT</p>
+    <h2 class="h2">A fader for every pad</h2>
+    <div class="split">
+      <div class="prose">
+        <p><strong>Mixer</strong> shows eight pads at a time, <strong>1–8</strong> and <strong>9–16</strong>, because sixteen across a phone makes the buttons too small. Each loaded pad has a fader, a pan knob, <strong>M</strong> and <strong>S</strong>. The fader and knob are the same volume and pan as the pad's settings.</p>
+        <ul>
+          <li><strong>M</strong> (mute) silences a pad and leaves its steps and fader alone. Mute is saved with the project and can be undone.</li>
+          <li><strong>S</strong> (solo) silences every pad that isn't soloed, in all four banks. Solo is for listening: it isn't saved and clears when a project opens, so a beat never comes back muted by a solo you forgot.</li>
+          <li>While a solo is on, <strong>Clear solo</strong> appears, and a dot on the Mixer tab shows it from other pages.</li>
+          <li>A silenced pad is left out of exports and the tape. What you hear is what you get.</li>
+        </ul>
+      </div>
+      <figure class="gshot"><div class="device app"><div class="screen"><img src="assets/gm-mixer.jpg" alt="The Mixer: eight faders with pan knobs, mute and solo, each named after its pad" loading="lazy"></div></div><figcaption>The Mixer</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="tape">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">09</span>PLAY IT ONTO TAPE</p>
+    <h2 class="h2">Record, loop, slow down, chop again</h2>
+    <div class="split">
+      <div class="prose">
+        <p>The <strong>Tape</strong> records everything that comes out: the pattern, the pads you play, the mixer and the effects. One take holds up to five minutes.</p>
+        <ul>
+          <li><strong>Record</strong> starts a take. While it runs, <strong>Export</strong> becomes a stop button with the time, on every page.</li>
+          <li><strong>Overdub</strong> plays the tape from the top and records a new layer over it. Undo brings back the take before.</li>
+          <li><strong>½×</strong>, <strong>1×</strong> and <strong>2×</strong> change the speed and pitch together, like a real tape. <strong>Brake</strong> slows it to a stop, the pitch falling. Hold <strong>Stutter</strong> to repeat a short slice.</li>
+          <li><strong>Loop</strong> repeats the stretch between <strong>In</strong> and <strong>Out</strong>. The handles settle on beats, and a ruler marks bars and beats. <strong>All</strong> resets them to the whole take.</li>
+          <li>Drag the reel to move the playhead, choose <strong>1, 2, 4 or 8 bars</strong>, and <strong>Chop to pads</strong> loads that stretch into the current bank.</li>
+          <li>The share button sends the tape as a WAV.</li>
+        </ul>
+      </div>
+      <figure class="gshot"><div class="device app"><div class="screen"><img src="assets/gm-tape.jpg" alt="The Tape page: a recorded take with a two-bar loop between In and Out" loading="lazy"></div></div><figcaption>A take with a two-bar loop</figcaption></figure>
     </div>
   </div>
 </section>
 
 <section id="effects" class="scanbg">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">08</span>MIX IT</p>
+    <p class="eyebrow"><span class="n">10</span>ADD EFFECTS</p>
     <h2 class="h2">One chain for the whole beat</h2>
-    <p class="lead">Tap <strong class="hl">MIX</strong> at the top. Effects apply after all 64 pads are mixed, in this order: distortion, filter, delay, reverb, then a limiter so sixteen pads at once can't clip.</p>
-    <div class="fgrid two">
-      <div class="fcard"><p class="ft">DISTORTION</p><p class="fd">0–100% grit and drive on the whole mix.</p></div>
-      <div class="fcard"><p class="ft">FILTER</p><p class="fd">Tap <b>LP / HP</b> to switch low-pass and high-pass. Cutoff sweeps 200 Hz to 20 kHz and reads OFF at whichever end is neutral.</p></div>
-      <div class="fcard"><p class="ft">DELAY</p><p class="fd">0–100%. <b>SYNC</b> sets the delay time as a note value (1/4, 1/8, 1/8T, 1/16) from the tempo, so repeats land on the beat. <b>FREE</b> keeps a fixed 0.25 s.</p></div>
-      <div class="fcard"><p class="ft">REVERB</p><p class="fd">0–100%, from a touch of room to a wash.</p></div>
+    <div class="split">
+      <div>
+        <p class="lead"><strong class="hl">FX</strong> works on all 64 pads mixed together, not on one pad. The order is <b>distortion → crush → filter → delay → reverb → compressor</b>, with a limiter at the end so sixteen pads at once can't clip.</p>
+        <div class="specsheet">
+          <div class="row"><span class="k">Distortion</span><span class="v">0–100%.</span></div>
+          <div class="row"><span class="k">Crush</span><span class="v">0–100%. Bit-crush; off adds nothing.</span></div>
+          <div class="row"><span class="k">Filter</span><span class="v">Tap the label for <b>Low pass</b> or <b>High pass</b>, then 200 Hz – 20 kHz. Reads OFF where it does nothing.</span></div>
+          <div class="row"><span class="k">Delay</span><span class="v">0–100%. <b>Sync</b> sets the time to 1/4, 1/8, 1/8T or 1/16 of the tempo, so the repeats land on the beat; <b>FREE</b> keeps 0.25 s.</span></div>
+          <div class="row"><span class="k">Reverb</span><span class="v">0–100%.</span></div>
+          <div class="row"><span class="k">Compress</span><span class="v">0–100%. Tighter, and a little louder, as it goes up.</span></div>
+        </div>
+        <div class="prose"><p>Every move is undoable, one drag at a time. On a phone the panel slides over the page so the pads stay playable; on iPad it's a sidebar.</p></div>
+      </div>
+      <figure class="gshot"><div class="device app"><div class="screen"><img src="assets/gm-fx.jpg" alt="The FX panel with a low-pass filter, reverb and compressor set" loading="lazy"></div></div><figcaption>FX on the Lo-fi kit</figcaption></figure>
     </div>
-    <div class="prose"><p>Every effects move can be undone, and one drag is one undo step. Sweeping the filter while the loop plays is one of the quickest ways to build tension.</p></div>
   </div>
 </section>
 
 <section id="resample">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">09</span>RESAMPLE &amp; GO AGAIN</p>
+    <p class="eyebrow"><span class="n">11</span>RESAMPLE &amp; GO AGAIN</p>
     <h2 class="h2">Turn the whole loop into one sound</h2>
     <div class="prose">
-      <p><span class="kbd">Long-press a pad → RESAMPLE MIX TO THIS PAD</span>. BreakBolt plays one full bar of your pattern, records everything playing (all four banks, with the master effects) and puts the result on that pad. Pads you tap during that bar are recorded too. A loop that was playing keeps playing.</p>
-      <p>That pad can then be trimmed, pitched, reversed and sequenced like any other. Put it on a step, pitch it up, trim it to its first hit, and the old loop becomes a new part.</p>
-      <ul>
-        <li>The button is disabled while the pattern is empty, since there'd be nothing to record. The line under it says so.</li>
-        <li>A resampled pad is a full bar long. Raise <strong>GATE</strong> if it cuts off in the sequencer.</li>
-      </ul>
+      <p><span class="kbd">Long-press a pad → RESAMPLE MIX TO THIS PAD</span>. BreakBolt plays the whole pattern, records everything (all four banks, effects included, and any pads you tap) and puts it on that pad. Now the loop is one sound you can trim, pitch, reverse and sequence again.</p>
+      <p>It's disabled while the pattern is empty, since there would be nothing to record. A resampled pad is as long as the pattern, so raise <strong>Gate</strong> if it cuts off when the sequencer plays it.</p>
     </div>
     <div class="why">
-      <p class="nl">Why one bar</p>
-      <p>One bar of sixteen steps is a deliberate limit. Resampling is how you get past it: <b>bounce, then play the bounce</b>. Each bounce frees the grid for the next layer.</p>
+      <p class="nl">Why this matters</p>
+      <p>Resampling is how a beat gets denser than sixteen pads can hold. It's the move the instrument is built around.</p>
     </div>
   </div>
 </section>
 
 <section id="export" class="scanbg">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">10</span>GET IT OUT</p>
+    <p class="eyebrow"><span class="n">12</span>GET IT OUT</p>
     <h2 class="h2">Three ways out</h2>
-    <p class="lead">At the bottom of the screen. Each opens the iOS share sheet: AirDrop, Files, Messages, or straight into another app.</p>
     <div class="fgrid">
-      <div class="fcard"><p class="ft">EXPORT LOOP</p><p class="fd">One bar as a WAV, aligned to the downbeat and cut to an exact frame count, so it loops cleanly in a DAW. Then <b>SHARE AUDIO</b>. Disabled while the pattern is empty.</p></div>
-      <div class="fcard"><p class="ft">RECORD LIVE</p><p class="fd">Records the master output while you play, for as long as you like. Tap <b>STOP</b> to finish.</p></div>
-      <div class="fcard"><p class="ft">MAKE VIDEO</p><p class="fd">A vertical MP4 of the last export or take with a BreakBolt title card, sized for short-form video. Then <b>SHARE VIDEO</b>.</p></div>
+      <div class="fcard"><p class="tag">For a DAW</p><p class="ft">Export loop</p><p class="fd">The whole pattern as a WAV, starting on the downbeat and cut to the exact length, so it loops cleanly anywhere.</p></div>
+      <div class="fcard"><p class="tag">A performance</p><p class="ft">Record to tape</p><p class="fd">Everything you play, as a take you can share as a WAV. See <a href="#tape">Tape</a>.</p></div>
+      <div class="fcard"><p class="tag">For short video</p><p class="ft">Make video</p><p class="fd">A vertical MP4 of the exported loop, ready to post.</p></div>
     </div>
     <div class="prose">
-      <p>Files are WAV rather than Apple's CAF, so they open anywhere, including Windows, Android and every DAW. They're named with the kind, tempo and time, like <span class="kbd">BreakBolt Loop 100BPM 2026-10-17 1432.wav</span>.</p>
-    </div>
-    <div class="why">
-      <p class="nl">Why the export is exact</p>
-      <p>A loop that's a few milliseconds long or short drifts after a few repeats in a DAW. The export is <b>exactly one bar to the sample</b>, starting on the downbeat, so it lines up on the first try.</p>
+      <p>Each opens the iOS share sheet: AirDrop, Files, Messages, or another app. Files are named with what they are, the tempo and the time. They're WAV, not Apple's CAF, so they open on Windows, Android and in every DAW.</p>
     </div>
   </div>
 </section>
 
 <section id="projects">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">11</span>KEEP SEVERAL PROJECTS</p>
-    <h2 class="h2">As many projects as you like</h2>
-    <div class="prose">
-      <p>Open <span class="kbd">Settings → PROJECT → MANAGE</span>. Each project has its own four banks, its own pattern, and its own copies of every sample, so working on one never affects another.</p>
-      <ul>
-        <li><strong>Tap a project</strong> to open it. The one you were in is saved first.</li>
-        <li><strong>NEW PROJECT</strong> starts an empty one.</li>
-        <li><strong>•••</strong> on a row offers <strong>Rename</strong>, <strong>Duplicate</strong> and <strong>Delete</strong>. Duplicating copies the samples too, so the copy survives if you delete the original.</li>
-      </ul>
-      <p>BreakBolt reopens whichever project you had open last.</p>
-    </div>
-    <div class="note">
-      <p class="nl">The one thing you can't undo</p>
-      <p>Deleting a project deletes its samples, including recordings that exist nowhere else. BreakBolt asks first.</p>
-    </div>
-    <div class="fgrid two">
-      <div class="fcard"><p class="ft">CLEAR BANK</p><p class="fd">Empties the bank you're looking at, and its rows in the pattern. Asks first, and can be undone.</p></div>
-      <div class="fcard"><p class="ft">CLEAR ALL</p><p class="fd">Empties all four banks and the whole pattern. Asks first, and can be undone.</p></div>
+    <p class="eyebrow"><span class="n">13</span>PROJECTS, UNDO &amp; SAFETY</p>
+    <h2 class="h2">Saved as you go</h2>
+    <div class="specsheet">
+      <div class="row"><span class="k">Projects</span><span class="v"><span class="kbd">Settings → PROJECT → MANAGE</span>. Each project has its own banks, pattern and copies of every sample. Tap one to open it; <b>•••</b> renames, duplicates or deletes it.</span></div>
+      <div class="row"><span class="k">Delete project</span><span class="v">The one thing in the app Undo can't bring back, so it asks first. <span class="dim">A duplicate keeps its own copy of the samples.</span></span></div>
+      <div class="row"><span class="k">Clear bank / all</span><span class="v">In Settings: empties one bank, or everything. Both ask first and can be undone.</span></div>
+      <div class="row"><span class="k">Undo / Redo</span><span class="v">Fifty steps, covering samples, chops, pad settings, the pattern, groove, tempo, the mixer and effects.</span></div>
+      <div class="row"><span class="k">Saving</span><span class="v">There's no save button. The project saves itself all the time, and BreakBolt reopens exactly where you left off, even after a crash.</span></div>
+      <div class="row"><span class="k">Calls &amp; headphones</span><span class="v">A call or another app stops the beat cleanly; Play brings it back. Unplugging headphones or switching to Bluetooth is handled.</span></div>
     </div>
   </div>
 </section>
 
-<section id="safety" class="scanbg">
+<section id="settings" class="scanbg">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">12</span>UNDO &amp; SAFETY</p>
-    <h2 class="h2">Autosave, undo and recovery</h2>
-    <div class="prose">
-      <ul>
-        <li><strong>UNDO / REDO</strong> cover loading samples, chopping and moving cuts, every pad setting including trims, pattern edits, swing, gate and velocity, tempo, and effects, with <strong>50 steps</strong> of history.</li>
-        <li><strong>There's no save button.</strong> The project saves itself continuously, and again whenever the app goes to the background.</li>
-        <li><strong>Crash recovery</strong> is automatic. The app reopens as you left it.</li>
-        <li><strong>Background audio</strong>: your loop keeps playing when you switch apps or lock the screen.</li>
-        <li><strong>Interruptions</strong>: a phone call, an alarm, or another app taking over audio stops the transport cleanly; PLAY or a pad tap brings the sound back. Unplugging headphones or connecting Bluetooth mid-pattern is handled too.</li>
-      </ul>
+    <p class="eyebrow"><span class="n">14</span>SETTINGS</p>
+    <h2 class="h2">The icon, top right</h2>
+    <div class="specsheet">
+      <div class="row"><span class="k">Project</span><span class="v">The open project and MANAGE, Clear bank, Clear all, and SHOW FIRST FLIP.</span></div>
+      <div class="row"><span class="k">Appearance</span><span class="v">Light (cream), Dark (deep green), or System.</span></div>
+      <div class="row"><span class="k">Layout</span><span class="v">Tabbed keeps Pads and Steps apart; Unified stacks them on one page. <span class="dim">Phones only.</span></span></div>
+      <div class="row"><span class="k">Tips</span><span class="v">On or off, and show them all again.</span></div>
+      <div class="row"><span class="k">Sound packs</span><span class="v">The starter kits, and MANAGE for the whole library.</span></div>
     </div>
-    <div class="why">
-      <p class="nl">Why it stays on the device</p>
-      <p>Everything runs <b>on the device</b>: no account, no sign-in, no cloud, no tracking. Your recordings leave the phone only when you share them.</p>
-    </div>
+    <div class="prose"><p>Haptics follow your iPhone's system haptics setting.</p></div>
   </div>
 </section>
 
-<section id="settings">
+<section id="screens">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">13</span>SETTINGS</p>
-    <h2 class="h2">The gear icon, top right</h2>
-    <div class="fgrid">
-      <div class="fcard"><p class="ft">Project</p><p class="fd">Which project is open, <b>MANAGE</b> to switch or create one, <b>CLEAR BANK</b>, <b>CLEAR ALL</b>, and <b>SHOW FIRST FLIP</b> to replay the walkthrough.</p></div>
-      <div class="fcard"><p class="ft">Appearance</p><p class="fd"><b>LIGHT</b>, <b>DARK</b>, or <b>SYSTEM</b>, which follows your device setting.</p></div>
-      <div class="fcard"><p class="ft">Layout</p><p class="fd"><b>TABBED</b> keeps PADS and STEPS as separate pages. <b>UNIFIED</b> stacks them on one scrolling page. Phone layouts only.</p></div>
-      <div class="fcard"><p class="ft">Tips</p><p class="fd"><b>ON</b> or <b>OFF</b> for the one-time tips, and <b>SHOW ALL TIPS AGAIN</b>.</p></div>
-      <div class="fcard"><p class="ft">Starter kit</p><p class="fd">The 64 sounds bundled across banks A–D that a new install opens with.</p></div>
-      <div class="fcard"><p class="ft">Sound library</p><p class="fd"><b>MANAGE</b> to browse, download or remove packs. See <a href="#library">Browse the library</a>.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="ipad" class="scanbg">
-  <div class="wrap">
-    <p class="eyebrow"><span class="n">14</span>ON IPAD</p>
+    <p class="eyebrow"><span class="n">15</span>IPAD &amp; IPHONE DUO</p>
     <h2 class="h2">The page, plus an inspector beside it</h2>
     <div class="prose">
-      <p>With the extra width, the page you're on fills the main column and an inspector sits beside it: the selected slice on PADS (waveform, start / end / length, SNAP ZERO-X, gain), or the selected pad on STEPS (sample, length at the current gate, pitch). The MIX panel opens as a further sidebar instead of over the page, and pad size is capped so sixteen pads stay pad-sized.</p>
-      <p>All four orientations work. On a narrow iPad, such as a mini in portrait or any iPad in a narrow Split View, there isn't room for the inspector, so you get the phone layout. Phone layouts adapt to every iPhone size.</p>
+      <p>With room to spare, the page fills the main column and an inspector sits beside it: the selected slice on Pads (start, end, length, <strong>SNAP ZERO-X</strong> and gain) or the selected pad elsewhere. <strong>FX</strong> opens as a further sidebar. On iPad, <strong>All pads</strong> shows the whole pattern at once.</p>
+      <p><strong>iPhone Duo</strong>, open, gets the same two columns: all 16 pads on the left, the chop tools beside them, and the step grid and mixer sized so everything fits without scrolling. Closed, the outer screen uses the phone layout, with the pads sized so all four rows fit.</p>
+      <p>On a narrow iPad (a mini in portrait, or a narrow Split View) there isn't room for the inspector, so you get the phone layout. iPad works in all four orientations.</p>
+    </div>
+    <div class="screens">
+      <figure><div class="device ipad"><div class="screen"><img src="assets/gm-ipad.jpg" alt="BreakBolt on iPad: the whole boom-bap pattern in one grid" loading="lazy"></div></div><figcaption><span class="t">iPad</span></figcaption></figure>
+      <figure><div class="device duo-open"><div class="screen"><img src="assets/gm-duo-open.jpg" alt="BreakBolt on an open iPhone Duo: 16 pads beside the chop tools" loading="lazy"></div></div><figcaption><span class="t">iPhone Duo, open</span></figcaption></figure>
+      <figure><div class="device duo-closed"><div class="screen"><img src="assets/gm-duo-closed.jpg" alt="BreakBolt on the iPhone Duo's outer screen: all 16 pads" loading="lazy"></div></div><figcaption><span class="t">Duo, closed</span></figcaption></figure>
     </div>
   </div>
 </section>
 
-<section id="trouble">
+<section id="trouble" class="scanbg">
   <div class="wrap">
-    <p class="eyebrow"><span class="n">15</span>TROUBLESHOOTING</p>
+    <p class="eyebrow"><span class="n">16</span>TROUBLESHOOTING</p>
     <h2 class="h2">If something's off</h2>
     <div class="specsheet">
-      <div class="row"><span class="k">No sound at all</span><span class="v">Check the silent switch and the volume. If a red line in the header says audio couldn't start, something else has the output, usually a call; it clears once the sound comes back.</span></div>
-      <div class="row"><span class="k">A long pad cuts off</span><span class="v">GATE limits how long each step sounds. Raise it toward 100% for resampled pads and long one-shots.</span></div>
-      <div class="row"><span class="k">TRIM sounds the same</span><span class="v">Many drum hits fill only the start of their slice; the rest is silence. Drag E back to the end of the visible sound, not the end of the strip.</span></div>
-      <div class="row"><span class="k">Recording won't start</span><span class="v">BreakBolt needs microphone access: iOS Settings → BreakBolt → Microphone. Close anything else using the mic, like a call.</span></div>
-      <div class="row"><span class="k">Recording won't chop</span><span class="v">End the take with RECORD's STOP, beside IMPORT. The REC light in the header only shows status.</span></div>
+      <div class="row"><span class="k">No sound at all</span><span class="v">Check the silent switch and the volume. If a red line says audio couldn't start, something else has the output, usually a call; it clears when the sound comes back.</span></div>
+      <div class="row"><span class="k">Recording won't start</span><span class="v">BreakBolt needs the microphone: iOS Settings → BreakBolt → Microphone. Close anything else using it, like a call.</span></div>
+      <div class="row"><span class="k">Recording won't chop</span><span class="v">End the take with <b>Stop</b>, beside Import. The timer on the screen only shows status.</span></div>
+      <div class="row"><span class="k">"Long sample"</span><span class="v">The file is longer than a bank holds (three minutes, or two on iPhones with less memory). Pick the part you want in the window that opens.</span></div>
       <div class="row"><span class="k">A pack is missing</span><span class="v">Packs need a connection the first time. iOS may remove a downloaded pack when storage runs low; browsing to it downloads it again.</span></div>
-      <div class="row"><span class="k">Loop drifts in my DAW</span><span class="v">Set the DAW's tempo to the app's BPM. The file is exactly one bar with no silence at the start.</span></div>
-      <div class="row"><span class="k">"Long sample"</span><span class="v">The file is longer than a bank can hold: three minutes, or two on iPhones with less memory, so four chopped banks can't run the phone out of memory. Pick the part you want in the window that opens.</span></div>
+      <div class="row"><span class="k">A long pad cuts off</span><span class="v"><b>Gate</b> limits how long each step sounds. Raise it toward 100% for resampled pads and long sounds.</span></div>
+      <div class="row"><span class="k">Trim sounds the same</span><span class="v">Many drum hits fill only the start of their slice. Drag <b>E</b> back to the end of the visible sound, not the end of the strip.</span></div>
+      <div class="row"><span class="k">Pitch sounds smeared</span><span class="v">Big Pitch or Stretch moves soften drums; that's how they keep length and note apart. For the old sampler sound, use the tape's ½× and 2×.</span></div>
+      <div class="row"><span class="k">Loop drifts in my DAW</span><span class="v">Set the DAW to the same tempo as BreakBolt. The file starts on the downbeat and is exactly the pattern's length.</span></div>
     </div>
   </div>
 </section>
-
-
 </main>
-
 <footer class="sitefoot">
   <div class="wrap">
-    <p>BREAKBOLT GUIDE · UPDATED 1 NOV 2026 · <a href="../">APPS BY MARIAN</a></p>
+    <p>BREAKBOLT GUIDE · UPDATED 21 NOV 2026 · <a href="../">APPS BY MARIAN</a></p>
     <p><a href="./">BREAKBOLT</a> · <a href="press.html">PRESS</a> · <a href="privacy.html">PRIVACY</a> · © 2026 MARIAN VRTIK</p>
   </div>
 </footer>
