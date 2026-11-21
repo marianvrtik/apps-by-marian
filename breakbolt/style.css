@@ -265,7 +265,9 @@
   nav.toc a:hover, nav.toc a:focus-visible { background: var(--panel-2); color: var(--signal-text); outline: none; }
   nav.toc a .n { font-family: var(--mono); color: var(--signal-text); font-size: 0.78rem; flex-shrink: 0; }
 
-  section[id] { scroll-margin-top: 12px; }
+  /* A link to a section or a subheading (guide.html#pitch) stops below
+     the 60px sticky header instead of under it. */
+  section[id], h3[id] { scroll-margin-top: 76px; }
   .new {
     font-family: var(--mono);
     font-size: 10px;
