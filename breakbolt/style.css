@@ -461,3 +461,8 @@ img, video { max-width: 100%; }
   .split { grid-template-columns: 1fr; gap: 28px; }
   .gshot { position: static; width: min(260px, 72vw); margin: 4px auto 0; }
 }
+
+/* Press page video posters: same reel as the home page, linking to the MP4. */
+.reel .poster { display: block; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 70px -30px var(--shadow), 0 0 70px 4px var(--glow); }
+.reel .poster img { display: block; width: 100%; aspect-ratio: 1080 / 1920; object-fit: cover; }
+.reel .dl { display: block; font-family: var(--mono); font-size: 0.78rem; color: var(--signal-text); }
